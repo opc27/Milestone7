@@ -1,27 +1,9 @@
-import { useState } from "react";
-import { TempleCard } from "./components/index.js/TempleCard"; 
 import "./App.css";
+import { InputDesign } from "./components/index.js/InputDesign";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <h1>Temple Preparation</h1>
-      <TempleCard />
-
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+      <InputDesign />
   );
 }
 
