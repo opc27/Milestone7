@@ -1,0 +1,14 @@
+.container {
+    min-height: 100vh;
+    background-color: #fff;
+    flex-direction: column;
+    display: flex;
+  }
+  
+  .moduleList {
+    flex-direction: column;
+    gap: 14px;
+    padding: 40px 40px 80px;
+    display: flex;
+  }
+  
