@@ -10,7 +10,7 @@ import { BottomBar } from "./BottomBar";
 import { ArrowIcon } from "./Icons";
 import styles from "./InputDesign.module.css";
 
-const InputDesign: React.FC = () => {
+export const InputDesign: React.FC = () => {
   return (
     <>
       <link
@@ -21,7 +21,8 @@ const InputDesign: React.FC = () => {
         <StatusBar />
         <Header />
         <WelcomeSection />
-        <button className={styles.pickupButton}>
+        {/*This just reloads the page for now but should be updated once we have the info for retaining user progress*/}
+        <button className={styles.pickupButton} onClick={() => window.location.href = window.location.href}>
           <span>Pick up where you left off</span>
           <ArrowIcon />
         </button>
@@ -33,5 +34,3 @@ const InputDesign: React.FC = () => {
     </>
   );
 };
-
-export default InputDesign;
