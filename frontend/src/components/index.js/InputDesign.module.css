@@ -261,6 +261,7 @@
   position: fixed;
   bottom: 0;
   box-shadow: 0 -4px 4px #00000040;
+  left: 0;
 }
 .progressBar {
   background-color: #78788029;
