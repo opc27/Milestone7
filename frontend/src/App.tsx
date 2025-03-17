@@ -4,7 +4,6 @@ import { InputDesign } from "./components/index.js/InputDesign";
 import ChatbotPage from "./components/chatbot/ChatInterface";
 import { ChatButton } from "./components/ChatButton"; // Import the ChatButton
 import { ModuleList } from "./components/modules/ModuleList";
-// import { Header } from "./components/index.js/Header"; 
 
 
 function App() {
