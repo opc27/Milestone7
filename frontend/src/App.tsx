@@ -5,6 +5,8 @@ import ChatbotPage from "./components/chatbot/ChatInterface";
 import { ChatButton } from "./components/ChatButton"; // Import the ChatButton
 import { ModuleList } from "./components/modules/ModuleList";
 import { ModuleListDupe } from "./components/modules/ModuleListDupe";
+import { ModulePage } from "./components/modules/ModulePage";
+import { ModuleProvider } from "./components/modules/ModuleContext";
 // import { Header } from "./components/index.js/Header"; 
 
 
@@ -17,7 +19,18 @@ function App() {
         <Route path="/" element={<InputDesign />} />
         <Route path="/chatbot" element={<ChatbotPage />} />
         <Route path="/modules" element={<ModuleList />} />
-        <Route path="/modules-dupe" element={<ModuleListDupe />} />
+        
+        {/* Module routes with shared context */}
+        <Route path="/modules-dupe" element={
+          <ModuleProvider>
+            <ModuleListDupe />
+          </ModuleProvider>
+        } />
+        <Route path="/modules-dupe/:moduleId" element={
+          <ModuleProvider>
+            <ModulePage />
+          </ModuleProvider>
+        } />
       </Routes>
     </Router>
   );

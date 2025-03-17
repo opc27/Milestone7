@@ -1,0 +1,115 @@
+.modulePage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.moduleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.moduleHeader h1 {
+  margin: 0;
+  color: #006d3a;
+  font-size: 28px;
+}
+
+.moduleStatus {
+  font-size: 16px;
+}
+
+.completed {
+  color: #006d3a;
+  font-weight: bold;
+}
+
+.active {
+  color: #014a93;
+  font-weight: bold;
+}
+
+.locked {
+  color: #585858;
+  font-weight: bold;
+}
+
+.moduleContent {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.moduleContent h1 {
+  color: #006d3a;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.moduleContent p {
+  margin-bottom: 15px;
+}
+
+.moduleActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.backButton, .completeButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.backButton {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.backButton:hover {
+  background-color: #e0e0e0;
+}
+
+.completeButton {
+  background-color: #006d3a;
+  color: white;
+}
+
+.completeButton:hover {
+  background-color: #005a30;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .modulePage {
+    padding: 15px;
+  }
+  
+  .moduleHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .moduleStatus {
+    margin-top: 10px;
+  }
+  
+  .moduleActions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .backButton, .completeButton {
+    width: 100%;
+  }
+}

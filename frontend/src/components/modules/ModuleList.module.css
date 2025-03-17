@@ -5,10 +5,17 @@
     display: flex;
   }
   
+  .pageTitle {
+    text-align: center;
+    color: #006d3a;
+    font-size: 32px;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+  
   .moduleList {
     flex-direction: column;
     gap: 14px;
     padding: 40px 40px 80px;
     display: flex;
   }
-  
