@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Milestone7_backend.props" />
+</Project>
