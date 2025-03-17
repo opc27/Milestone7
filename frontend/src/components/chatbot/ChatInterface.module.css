@@ -268,3 +268,35 @@
   padding: 8px;
   display: flex;
 }
+
+
+.dropdownMenu {
+  position: absolute;
+  top: 220px; /* Adjust to move below the menu button */
+  left: 350px; /* Aligns it with the button */
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.menuItem {
+  padding: 10px;
+  text-decoration: none;
+  color: green;
+  border-bottom: 1px solid green;
+  text-align: center;
+}
+
+.menuItem:last-child {
+  border-bottom: none;
+}
+
+.menuItem:hover {
+  background-color: rgba(0, 128, 0, 0.1);
+}
+
+
