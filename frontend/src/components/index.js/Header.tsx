@@ -1,19 +1,40 @@
-import React from "react";
-import { MenuIcon } from "./Icons";
-import styles from "./InputDesign.module.css";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { MenuIcon } from "./Icons"; // Make sure this is the correct path
+import styles from "./Header.module.css"; // Make sure to create this CSS file
 
-export const Header: React.FC = () => (
-  <nav className={styles.header}>
-    <button className={styles.menuButton} aria-label="Menu">
-      <div className={styles.menuIconContainer}>
-        <MenuIcon />
-      </div>
-    </button>
-    <h1 className={styles.headerTitle}>Home</h1>
-    <img
-      src="https://cdn.builder.io/api/v1/image/assets/TEMP/b5746e2ba8de52487eba4d5a1dd05f3f0a50dcf6"
-      alt="Profile"
-      className={styles.avatar}
-    />
-  </nav>
-);
+export const Header: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
+  return (
+    <header className={styles.header}>
+      <button className={styles.menuButton} onClick={toggleMenu} aria-label="Menu">
+        <div className={styles.menuIconContainer}>
+          <MenuIcon />
+        </div>
+      </button>
+
+      <h1 className={styles.headerTitle}>Home</h1>
+
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b5746e2ba8de52487eba4d5a1dd05f3f0a50dcf6"
+        alt="Profile"
+        className={styles.avatar}
+      />
+
+      {/* Dropdown Menu */}
+      {menuOpen && (
+        <div className={styles.dropdownMenu}>
+          <Link to="/" className={styles.menuItem}>Home</Link>
+          <Link to="/modules" className={styles.menuItem}>Modules</Link>
+          <Link to="/chatbot" className={styles.menuItem}>Chatbot</Link>
+          <Link to="/logout" className={styles.menuItem}>Log Out</Link>
+        </div>
+      )}
+    </header>
+  );
+};
