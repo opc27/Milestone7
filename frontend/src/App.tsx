@@ -4,6 +4,7 @@ import { InputDesign } from "./components/index.js/InputDesign";
 import ChatbotPage from "./components/chatbot/ChatInterface";
 import { ChatButton } from "./components/ChatButton"; // Import the ChatButton
 import { ModuleList } from "./components/modules/ModuleList";
+import { ModuleListDupe } from "./components/modules/ModuleListDupe";
 // import { Header } from "./components/index.js/Header"; 
 
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<InputDesign />} />
         <Route path="/chatbot" element={<ChatbotPage />} />
         <Route path="/modules" element={<ModuleList />} />
+        <Route path="/modules-dupe" element={<ModuleListDupe />} />
       </Routes>
     </Router>
   );
