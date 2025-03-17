@@ -1,10 +1,9 @@
-import { useState } from 'react'
-import CountdownTimer from "./components\\index.js/CountdownTimer.tsx"
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { InputDesign } from "./components/index.js/InputDesign";
 import ChatbotPage from "./components/chatbot/ChatInterface";
 import { ChatButton } from "./components/ChatButton"; // Import the ChatButton
+import { ModuleList } from "./components/modules/ModuleList";
 // import { Header } from "./components/index.js/Header"; 
 
 
@@ -16,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<InputDesign />} />
         <Route path="/chatbot" element={<ChatbotPage />} />
+        <Route path="/modules" element={<ModuleList />} />
       </Routes>
     </Router>
   );
