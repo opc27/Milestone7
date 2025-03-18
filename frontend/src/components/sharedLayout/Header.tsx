@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
           <Link to="/" className={styles.menuItem}>Home</Link>
           <Link to="/modules" className={styles.menuItem}>Modules</Link>
           <Link to="/chatbot" className={styles.menuItem}>Chatbot</Link>
-          <Link to="/logout" className={styles.menuItem}>Log Out</Link>
+          <Link to="/login" className={styles.menuItem}>Log Out</Link>
         </div>
       )}
     </header>
