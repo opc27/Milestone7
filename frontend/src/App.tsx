@@ -1,3 +1,4 @@
+
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { InputDesign } from "./components/index.js/InputDesign";
@@ -30,7 +31,6 @@ function App() {
 
 export default App;
 
-
-
-
-{/* <Header /> This ensures the header is always present */}
+{
+  /* <Header /> This ensures the header is always present */
+}
