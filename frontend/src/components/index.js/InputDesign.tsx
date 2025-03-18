@@ -2,10 +2,10 @@
 import React from "react";
 import { WelcomeSection } from "./WelcomeSection";
 import { TempleCard } from "./TempleCard";
-import { EventsCard } from "./EventsCard";
 import { SpiritualThought } from "./SpiritualThought";
 import { ArrowIcon } from "../sharedLayout/Icons";
 import styles from "./InputDesign.module.css";
+import UpcomingEvents from "./Events/UpcomingEvents";
 
 export const InputDesign: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ export const InputDesign: React.FC = () => {
           <ArrowIcon />
         </button>
         <TempleCard />
-        <EventsCard />
+        <UpcomingEvents />
         <SpiritualThought />
       </main>
     </>
