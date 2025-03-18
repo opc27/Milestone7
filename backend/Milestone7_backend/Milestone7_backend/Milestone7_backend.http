@@ -1,0 +1,6 @@
+@Milestone7_backend_HostAddress = http://localhost:5208
+
+GET {{Milestone7_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
