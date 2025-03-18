@@ -1,14 +1,11 @@
 "use client";
 import React from "react";
-import { StatusBar } from "./StatusBar";
-import { Header } from "./Header";
 import { WelcomeSection } from "./WelcomeSection";
 import { TempleCard } from "./TempleCard";
-import { EventsCard } from "./EventsCard";
 import { SpiritualThought } from "./SpiritualThought";
-import { BottomBar } from "./BottomBar";
-import { ArrowIcon } from "./Icons";
+import { ArrowIcon } from "../sharedLayout/Icons";
 import styles from "./InputDesign.module.css";
+import UpcomingEvents from "./Events/UpcomingEvents";
 
 export const InputDesign: React.FC = () => {
   return (
@@ -18,8 +15,6 @@ export const InputDesign: React.FC = () => {
         rel="stylesheet"
       />
       <main className={styles.appContainer}>
-        <StatusBar />
-        <Header />
         <WelcomeSection />
         {/*This just reloads the page for now but should be updated once we have the info for retaining user progress*/}
         <button className={styles.pickupButton} onClick={() => window.location.href = window.location.href}>
@@ -27,9 +22,8 @@ export const InputDesign: React.FC = () => {
           <ArrowIcon />
         </button>
         <TempleCard />
-        <EventsCard />
+        <UpcomingEvents />
         <SpiritualThought />
-        <BottomBar />
       </main>
     </>
   );

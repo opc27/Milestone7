@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./ChatInterface.module.css";
 
-export const ChatHeader = () => {
+export const ChatHeader: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Toggle menu visibility
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
   return (
     <header className={styles.chatHeader}>
       <div className={styles.headerContent}>
-        <button className={styles.menuButton}>
+        {/* Menu Button */}
+        <button className={styles.menuButton} onClick={toggleMenu} aria-label="Menu">
           <div className={styles.menuIconWrapper}>
             <div className={styles.menuIcon}>
               <div
@@ -17,19 +26,10 @@ export const ChatHeader = () => {
             </div>
           </div>
         </button>
+
         <h1 className={styles.chatTitle}>Chatbot</h1>
-        <button className={styles.profileButton}>
-          <div className={styles.profileIconWrapper}>
-            <div className={styles.profileIcon}>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html:
-                    '<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.67275 17.9059C7.52275 17.2559 8.47275 16.7434 9.52275 16.3684C10.5728 15.9934 11.6728 15.8059 12.8228 15.8059C13.9728 15.8059 15.0728 15.9934 16.1228 16.3684C17.1728 16.7434 18.1228 17.2559 18.9728 17.9059C19.5561 17.2226 20.0103 16.4476 20.3353 15.5809C20.6603 14.7142 20.8228 13.7892 20.8228 12.8059C20.8228 10.5892 20.0436 8.70174 18.4853 7.14341C16.9269 5.58507 15.0394 4.80591 12.8228 4.80591C10.6061 4.80591 8.71859 5.58507 7.16025 7.14341C5.60192 8.70174 4.82275 10.5892 4.82275 12.8059C4.82275 13.7892 4.98525 14.7142 5.31025 15.5809C5.63525 16.4476 6.08942 17.2226 6.67275 17.9059ZM12.8228 13.8059C11.8394 13.8059 11.0103 13.4684 10.3353 12.7934C9.66025 12.1184 9.32275 11.2892 9.32275 10.3059C9.32275 9.32258 9.66025 8.49341 10.3353 7.81841C11.0103 7.14341 11.8394 6.80591 12.8228 6.80591C13.8061 6.80591 14.6353 7.14341 15.3103 7.81841C15.9853 8.49341 16.3228 9.32258 16.3228 10.3059C16.3228 11.2892 15.9853 12.1184 15.3103 12.7934C14.6353 13.4684 13.8061 13.8059 12.8228 13.8059ZM12.8228 22.8059C11.4394 22.8059 10.1394 22.5434 8.92275 22.0184C7.70609 21.4934 6.64775 20.7809 5.74775 19.8809C4.84775 18.9809 4.13525 17.9226 3.61025 16.7059C3.08525 15.4892 2.82275 14.1892 2.82275 12.8059C2.82275 11.4226 3.08525 10.1226 3.61025 8.90591C4.13525 7.68924 4.84775 6.63091 5.74775 5.73091C6.64775 4.83091 7.70609 4.11841 8.92275 3.59341C10.1394 3.06841 11.4394 2.80591 12.8228 2.80591C14.2061 2.80591 15.5061 3.06841 16.7228 3.59341C17.9394 4.11841 18.9978 4.83091 19.8978 5.73091C20.7978 6.63091 21.5103 7.68924 22.0353 8.90591C22.5603 10.1226 22.8228 11.4226 22.8228 12.8059C22.8228 14.1892 22.5603 15.4892 22.0353 16.7059C21.5103 17.9226 20.7978 18.9809 19.8978 19.8809C18.9978 20.7809 17.9394 21.4934 16.7228 22.0184C15.5061 22.5434 14.2061 22.8059 12.8228 22.8059Z" fill="#49454F"></path></svg>',
-                }}
-              />
-            </div>
-          </div>
-        </button>
+
+        {/* Profile Avatar */}
         <div className={styles.avatarWrapper}>
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/1baed582fb419063db7873c1068bc541e1c23c0e"
@@ -38,6 +38,16 @@ export const ChatHeader = () => {
           />
         </div>
       </div>
+
+      {/* Dropdown Menu (Only Shows if menuOpen is true) */}
+      {menuOpen && (
+        <div className={styles.dropdownMenu}>
+          <Link to="/" className={styles.menuItem}>Home</Link>
+          <Link to="/modules" className={styles.menuItem}>Modules</Link>
+          <Link to="/chatbot" className={styles.menuItem}>Chatbot</Link>
+          <Link to="/logout" className={styles.menuItem}>Log Out</Link>
+        </div>
+      )}
     </header>
   );
 };
