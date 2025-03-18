@@ -4,7 +4,7 @@ import {
   MenuIconProps,
   ChatIconProps,
   ArrowIconProps,
-} from "./types";
+} from "../index.js/types";
 
 export const StatusIcons: React.FC<StatusIconsProps> = ({ className }) => (
   <svg

@@ -1,0 +1,289 @@
+.appContainer {
+    background-color: #fcfcfc;
+    width: 393px;
+    height: 852px;
+    font-family: Roboto, sans-serif;
+    position: relative;
+  }
+  @media (width<=991px) {
+    .appContainer {
+      width: 100%;
+    }
+  }
+  .statusBar {
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 16px;
+    display: flex;
+  }
+  .time {
+    color: #000;
+    font-family: Asap, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .dynamicIslandSpacer {
+    width: 124px;
+  }
+  .header {
+    background-color: #fff;
+    border-bottom: 0.1px solid #000;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 8px 4px;
+    display: flex;
+    box-shadow: 0 4px 4px #00000040;
+  }
+  .menuButton {
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    display: flex;
+  }
+  .menuIconContainer {
+    background-color: #dff5eb;
+    border: 1px solid #006d3a;
+    border-radius: 100px;
+    padding: 8px;
+  }
+  .headerTitle {
+    color: #1d1b20;
+    text-align: center;
+    font-size: 22px;
+  }
+  .avatar {
+    border: 1px solid #006d3a;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  .welcomeSection {
+    align-items: center;
+    margin-top: 40px;
+    padding: 0 16px;
+    display: flex;
+  }
+  .profileImage {
+    border: 3px solid #006d3a;
+    border-radius: 50%;
+    width: 114px;
+    height: 114px;
+  }
+  .welcomeText {
+    margin-left: 16px;
+  }
+  .welcome {
+    color: #006d3a;
+    font-size: 48px;
+  }
+  @media (width<=640px) {
+    .welcome {
+      font-size: 36px;
+    }
+  }
+  .name {
+    color: #006d3a;
+    margin-top: 4px;
+    font-size: 30px;
+  }
+  @media (width<=640px) {
+    .name {
+      font-size: 24px;
+    }
+  }
+  .pickupButton {
+    color: #fff;
+    background-color: #006d3a;
+    border-radius: 100px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 16px;
+    padding: 10px 24px;
+    font-size: 22px;
+    display: flex;
+  }
+  .templeCard {
+    background-color: #dff5eb;
+    border: 3px solid #006d3a;
+    border-radius: 12px;
+    margin: 16px;
+    overflow: hidden;
+  }
+  .templeImage {
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+    height: 247px;
+  }
+  .templeInfo {
+    text-align: center;
+    padding: 16px;
+  }
+  .templeName {
+    color: #006d3a;
+    font-size: 16px;
+  }
+  .daysCount {
+    color: #006d3a;
+    margin: 8px 0;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .endowmentText {
+    color: #006d3a;
+    font-size: 14px;
+  }
+  .eventsCard {
+    background-color: #dff5eb;
+    border: 3px solid #006d3a;
+    border-radius: 12px;
+    margin: 16px;
+    padding: 16px;
+  }
+  .eventsHeader {
+    color: #006d3a;
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+  .eventItem {
+    color: #006d3a;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 16px;
+    display: flex;
+  }
+  .eventsButtons {
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+    display: flex;
+  }
+  @media (width<=640px) {
+    .eventsButtons {
+      flex-direction: column;
+    }
+  }
+  .newEvent {
+    color: #006d3a;
+    background-color: #fff;
+    border: 1px solid #006d3a;
+    border-radius: 100px;
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+  @media (width<=640px) {
+    .newEvent {
+      width: 100%;
+    }
+  }
+  .editEvent {
+    color: #fff;
+    background-color: #006d3a;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+  @media (width<=640px) {
+    .editEvent {
+      width: 100%;
+    }
+  }
+  .spiritualThought {
+    background-color: #dff5eb;
+    border: 3px solid #006d3a;
+    border-radius: 12px;
+    margin: 16px;
+    padding: 16px;
+  }
+  .thoughtHeader {
+    color: #006d3a;
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+  .thoughtContent {
+    color: #006d3a;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+  .thoughtReference {
+    color: #006d3a;
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .thoughtButtons {
+    justify-content: center;
+    gap: 10px;
+    display: flex;
+  }
+  @media (width<=640px) {
+    .thoughtButtons {
+      flex-direction: column;
+    }
+  }
+  .shareButton {
+    color: #006d3a;
+    background-color: #fff;
+    border: 1px solid #006d3a;
+    border-radius: 100px;
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+  @media (width<=640px) {
+    .shareButton {
+      width: 100%;
+    }
+  }
+  .seeMore {
+    color: #fff;
+    background-color: #006d3a;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+  @media (width<=640px) {
+    .seeMore {
+      width: 100%;
+    }
+  }
+  .bottomBar {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -4px 4px #00000040;
+    left: 0;
+  }
+  .progressBar {
+    background-color: #78788029;
+    height: 4px;
+    margin: 16px;
+  }
+  .progressFill {
+    background-color: #006d3a;
+    width: 173px;
+    height: 4px;
+  }
+  .chatButton {
+    background-color: #006d3a;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    right: 16px;
+  }
+  
+  

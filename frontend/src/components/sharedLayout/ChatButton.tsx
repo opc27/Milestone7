@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./chatbot/ChatInterface.module.css"; // Keep the correct import for styles
+import styles from "../chatbot/ChatInterface.module.css"; // Keep the correct import for styles
 
 export const ChatButton = () => {
   const navigate = useNavigate();
