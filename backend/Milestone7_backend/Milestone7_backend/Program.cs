@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite("Data Source=templeprepdata.db"));
 
-// Define allowed frontend ports (3000-3100)
+// Define allowed frontend ports (3000-3100) - does this do anything?
 var allowedOrigins = Enumerable.Range(3000, 101)  // Ports 3000-3100
     .Select(port => $"http://localhost:{port}")
     .ToArray();
@@ -28,7 +28,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors(x => x.WithOrigins("http://localhost:3003"));
+app.UseCors(x => x.WithOrigins("http://localhost:3000").AllowAnyHeader()); //idk man it broke before so I added AllowAnyHeader
 
 app.UseAuthorization();
 

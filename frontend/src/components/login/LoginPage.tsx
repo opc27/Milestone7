@@ -20,9 +20,40 @@ const StatusBar = () => (
 const LoginForm = () => {
   const [email, setEmail] = useState("AnnaMarie401@byuis.com");
   const [password, setPassword] = useState("●●●●●●●●●●●●");
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const loginData = { email, password };
+
+    try {
+      //I have no idea why but it gives a CORS error if it's http and https; this way it throws different errors that make more sense.
+      const response = await fetch("https://localhost:5000/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(loginData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        setError(errorData.message || "An error occurred");
+      } else {
+        const data = await response.json();
+        console.log("Login successful", data);
+        setError(null); // Reset error on success
+        // You can store the user ID or token here if needed
+        // localStorage.setItem("userId", data.userId);
+      }
+    } catch (err) {
+      setError("There was an issue with the request.");
+    }
+  };
 
   return (
-    <form className={styles.loginForm}>
+    <form className={styles.loginForm} onSubmit={handleSubmit}>
       <button type="button" className={styles.churchButton}>
         Sign in with church account
       </button>
