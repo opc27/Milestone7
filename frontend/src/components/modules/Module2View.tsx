@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import styles from "./ModuleView.css";
+import styles from "./ModuleView.module.css";
 
 export const Module2View: React.FC = () => {
   return (
