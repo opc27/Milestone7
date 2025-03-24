@@ -73,26 +73,58 @@ const LoginForm = () => {
   );
 };
 
-const HelpSection = () => (
-  <nav className={styles.helpLinks}>
-    <div className={styles.accountLinks}>
-      <a href="#" className={styles.link}>
-        Forgot username/password?
-      </a>
-      <a href="#" className={styles.link}>
-        Create an Account
-      </a>
-    </div>
-    <div className={styles.supportLinks}>
-      <a href="#" className={styles.smallLink}>
-        Need Help?
-      </a>
-      <a href="#" className={styles.smallLink}>
-        Contact Support
-      </a>
-    </div>
-  </nav>
-);
+// const HelpSection = () => (
+//   <nav className={styles.helpLinks}>
+//     <div className={styles.accountLinks}>
+//       <a href="#" className={styles.link}>
+//         Forgot username/password?
+//       </a>
+//       <a href="#" className={styles.link}>
+//         Create an Account
+//       </a>
+//     </div>
+//     <div className={styles.supportLinks}>
+//       <a href="#" className={styles.smallLink}>
+//         Need Help?
+//       </a>
+//       <a href="#" className={styles.smallLink}>
+//         Contact Support
+//       </a>
+//     </div>
+//   </nav>
+// );
+
+const HelpSection = () => {
+  const navigate = useNavigate();
+
+  return (
+    <nav className={styles.helpLinks}>
+      <div className={styles.accountLinks}>
+        <a href="#" className={styles.link}>
+          Forgot username/password?
+        </a>
+        <a
+          href="#"
+          className={styles.link}
+          onClick={(e) => {
+            e.preventDefault(); // Prevent default link behavior
+            navigate('"/index/CreateAccount"'); // Redirect to CreateAccount page
+          }}
+        >
+          Create an Account
+        </a>
+      </div>
+      <div className={styles.supportLinks}>
+        <a href="#" className={styles.smallLink}>
+          Need Help?
+        </a>
+        <a href="#" className={styles.smallLink}>
+          Contact Support
+        </a>
+      </div>
+    </nav>
+  );
+};
 
 const ChatButton = () => (
   <div className={styles.chatButton}>
