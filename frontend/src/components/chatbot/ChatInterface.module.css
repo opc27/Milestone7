@@ -16,6 +16,13 @@
   flex-direction: column;
   width: 100%;
   display: flex;
+  height: 100vh; /* Ensure the content takes full viewport height */
+}
+
+.chatbotIframe {
+  height: 100%;
+  min-height: 700px;
+  border: none;
 }
 
 /* Message List Styles */
@@ -173,5 +180,3 @@
 .menuItem:hover {
   background-color: rgba(0, 128, 0, 0.1);
 }
-
-
