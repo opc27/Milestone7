@@ -1,7 +1,7 @@
-"use client";
-import * as React from "react";
-import { useState } from "react";
-import styles from "./LoginPage.module.css";
+'use client';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styles from './LoginPage.module.css';
 
 const StatusBar = () => (
   <header className={styles.statusBar}>
@@ -15,14 +15,19 @@ const StatusBar = () => (
   </header>
 );
 
-
-
 const LoginForm = () => {
-  const [email, setEmail] = useState("AnnaMarie401@byuis.com");
-  const [password, setPassword] = useState("●●●●●●●●●●●●");
+  const [email, setEmail] = useState('AnnaMarie401@byuis.com');
+  const [password, setPassword] = useState('●●●●●●●●●●●●');
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    // Here you can add your authentication logic
+    navigate('/'); // Redirect to the home page
+  };
 
   return (
-    <form className={styles.loginForm}>
+    <form className={styles.loginForm} onSubmit={handleSubmit}>
       <button type="button" className={styles.churchButton}>
         Sign in with church account
       </button>
@@ -68,26 +73,58 @@ const LoginForm = () => {
   );
 };
 
-const HelpSection = () => (
-  <nav className={styles.helpLinks}>
-    <div className={styles.accountLinks}>
-      <a href="#" className={styles.link}>
-        Forgot username/password?
-      </a>
-      <a href="#" className={styles.link}>
-        Create an Account
-      </a>
-    </div>
-    <div className={styles.supportLinks}>
-      <a href="#" className={styles.smallLink}>
-        Need Help?
-      </a>
-      <a href="#" className={styles.smallLink}>
-        Contact Support
-      </a>
-    </div>
-  </nav>
-);
+// const HelpSection = () => (
+//   <nav className={styles.helpLinks}>
+//     <div className={styles.accountLinks}>
+//       <a href="#" className={styles.link}>
+//         Forgot username/password?
+//       </a>
+//       <a href="#" className={styles.link}>
+//         Create an Account
+//       </a>
+//     </div>
+//     <div className={styles.supportLinks}>
+//       <a href="#" className={styles.smallLink}>
+//         Need Help?
+//       </a>
+//       <a href="#" className={styles.smallLink}>
+//         Contact Support
+//       </a>
+//     </div>
+//   </nav>
+// );
+
+const HelpSection = () => {
+  const navigate = useNavigate();
+
+  return (
+    <nav className={styles.helpLinks}>
+      <div className={styles.accountLinks}>
+        <a href="#" className={styles.link}>
+          Forgot username/password?
+        </a>
+        <a
+          href="#"
+          className={styles.link}
+          onClick={(e) => {
+            e.preventDefault(); // Prevent default link behavior
+            navigate('"/index/CreateAccount"'); // Redirect to CreateAccount page
+          }}
+        >
+          Create an Account
+        </a>
+      </div>
+      <div className={styles.supportLinks}>
+        <a href="#" className={styles.smallLink}>
+          Need Help?
+        </a>
+        <a href="#" className={styles.smallLink}>
+          Contact Support
+        </a>
+      </div>
+    </nav>
+  );
+};
 
 const ChatButton = () => (
   <div className={styles.chatButton}>
