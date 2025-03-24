@@ -3712,23 +3712,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\harmo\\.nuget\\packages\\": {},
+    "C:\\Users\\casey\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Milestone7_backend.csproj",
+      "projectUniqueName": "C:\\Users\\casey\\source\\repos\\Milestone7\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Milestone7_backend.csproj",
       "projectName": "Milestone7_backend",
-      "projectPath": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Milestone7_backend.csproj",
-      "packagesPath": "C:\\Users\\harmo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\obj\\",
+      "projectPath": "C:\\Users\\casey\\source\\repos\\Milestone7\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Milestone7_backend.csproj",
+      "packagesPath": "C:\\Users\\casey\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\casey\\source\\repos\\Milestone7\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\harmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\casey\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3809,7 +3809,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
