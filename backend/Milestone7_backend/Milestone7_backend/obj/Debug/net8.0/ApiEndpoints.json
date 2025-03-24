@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "Milestone7_backend.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Milestone7_backend.Models.LoginRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Milestone7_backend.Controllers.EventsController",
     "Method": "Get",
     "RelativePath": "Events",
