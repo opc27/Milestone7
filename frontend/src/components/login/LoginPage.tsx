@@ -18,14 +18,14 @@ const StatusBar = () => (
 
 
 const LoginForm = () => {
-  const [email, setEmail] = useState("AnnaMarie401@byuis.com");
+  const [username, setUsername] = useState("AnnaMarie401@byuis.com");
   const [password, setPassword] = useState("●●●●●●●●●●●●");
   const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const loginData = { email, password };
+    const loginData = { username, password };
 
     try {
       //I have no idea why but it gives a CORS error if it's http and https; this way it throws different errors that make more sense.
@@ -68,8 +68,8 @@ const LoginForm = () => {
           <label className={styles.inputLabel}>Email/Username</label>
           <input
             type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             className={styles.input}
           />
         </div>

@@ -37,8 +37,12 @@ namespace Milestone7_backend.Controllers
             bool passwordMatches = user.Password == model.Password;
 
             if (!passwordMatches)
+            {
+                Console.WriteLine("Password does not match.");
                 return Unauthorized(new { message = "Invalid username or password" });
+            }
 
+            Console.WriteLine("Login successful!");
             return Ok(new { message = "Login successful", userId = user.UserId });
         }
     }
