@@ -3,13 +3,13 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { InputDesign } from "./components/index.js/InputDesign";
 import ChatbotPage from "./components/chatbot/ChatInterface";
-import { ChatButton } from "./components/sharedLayout/ChatButton";
+// import { ChatButton } from "./components/sharedLayout/ChatButton";
 import { ModuleList } from "./components/modules/ModuleList";
 import { ModulePage } from "./components/modules/ModulePage";
 import { ModuleProvider } from "./components/modules/ModuleContext";
 import { Header } from "./components/sharedLayout/Header";
 import { StatusBar } from "./components/sharedLayout/StatusBar";
-import { BottomBar } from "./components/sharedLayout/BottomBar";
+// import { BottomBar } from "./components/sharedLayout/BottomBar";
 import LoginPage from "./components/login/LoginPage";
 
 // Create a wrapper component to use the useLocation hook
@@ -29,13 +29,7 @@ const AppContent = () => {
         <Route path="/modules/:moduleId" element={<ModulePage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
-      {/* Only show ChatButton and BottomBar if not on the chatbot page */}
-      {!isChatbotPage && (
-        <>
-          <ChatButton />
-          <BottomBar />
-        </>
-      )}
+      {/* Chat button and bottom bar removed as requested */}
     </>
   );
 };
