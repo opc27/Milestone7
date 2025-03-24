@@ -921,7 +921,9 @@
             "related": ".pdb;.xml"
           }
         },
-        "frameworkReferences": ["Microsoft.AspNetCore.App"]
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Swashbuckle.AspNetCore.SwaggerGen/6.6.2": {
         "type": "package",
@@ -951,7 +953,9 @@
             "related": ".pdb;.xml"
           }
         },
-        "frameworkReferences": ["Microsoft.AspNetCore.App"]
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "System.CodeDom/6.0.0": {
         "type": "package",
@@ -3708,20 +3712,31 @@
     ]
   },
   "packageFolders": {
-    "/Users/oliviachristensen/.nuget/packages/": {}
+    "C:\\Users\\harmo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/oliviachristensen/Documents/Milestone7/backend/Milestone7_backend/Milestone7_backend/Milestone7_backend.csproj",
+      "projectUniqueName": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Milestone7_backend.csproj",
       "projectName": "Milestone7_backend",
-      "projectPath": "/Users/oliviachristensen/Documents/Milestone7/backend/Milestone7_backend/Milestone7_backend/Milestone7_backend.csproj",
-      "packagesPath": "/Users/oliviachristensen/.nuget/packages/",
-      "outputPath": "/Users/oliviachristensen/Documents/Milestone7/backend/Milestone7_backend/Milestone7_backend/obj/",
+      "projectPath": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Milestone7_backend.csproj",
+      "packagesPath": "C:\\Users\\harmo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\obj\\",
       "projectStyle": "PackageReference",
-      "configFilePaths": ["/Users/oliviachristensen/.nuget/NuGet/NuGet.Config"],
-      "originalTargetFrameworks": ["net8.0"],
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\harmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3731,13 +3746,16 @@
         }
       },
       "warningProperties": {
-        "warnAsError": ["NU1605"]
+        "warnAsError": [
+          "NU1605"
+        ]
       },
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -3791,7 +3809,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

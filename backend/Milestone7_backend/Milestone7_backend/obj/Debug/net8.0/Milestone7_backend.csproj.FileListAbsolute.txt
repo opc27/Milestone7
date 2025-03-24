@@ -160,7 +160,6 @@ C:\Users\harmo\Documents\GitHub\Milestone7\backend\Milestone7_backend\Milestone7
 C:\Users\harmo\Documents\GitHub\Milestone7\backend\Milestone7_backend\Milestone7_backend\obj\Debug\net8.0\Milestone7_backend.pdb
 C:\Users\harmo\Documents\GitHub\Milestone7\backend\Milestone7_backend\Milestone7_backend\obj\Debug\net8.0\Milestone7_backend.genruntimeconfig.cache
 C:\Users\harmo\Documents\GitHub\Milestone7\backend\Milestone7_backend\Milestone7_backend\obj\Debug\net8.0\ref\Milestone7_backend.dll
-C:\Users\harmo\Documents\GitHub\Milestone7\backend\Milestone7_backend\Milestone7_backend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\sarface\Documents\GitHub\Milestone7\backend\Milestone7_backend\Milestone7_backend\obj\Debug\net8.0\Milestone7_backend.dll
 C:\Users\sarface\Documents\GitHub\Milestone7\backend\Milestone7_backend\Milestone7_backend\obj\Debug\net8.0\refint\Milestone7_backend.dll
 C:\Users\sarface\Documents\GitHub\Milestone7\backend\Milestone7_backend\Milestone7_backend\obj\Debug\net8.0\Milestone7_backend.pdb
@@ -325,3 +324,4 @@ C:\Users\sarface\Documents\GitHub\Milestone7\backend\Milestone7_backend\Mileston
 C:\Users\sarface\Documents\GitHub\Milestone7\backend\Milestone7_backend\Milestone7_backend\obj\Debug\net8.0\Mileston.FECF3C7D.Up2Date
 C:\Users\sarface\Documents\GitHub\Milestone7\backend\Milestone7_backend\Milestone7_backend\obj\Debug\net8.0\Milestone7_backend.genruntimeconfig.cache
 C:\Users\sarface\Documents\GitHub\Milestone7\backend\Milestone7_backend\Milestone7_backend\obj\Debug\net8.0\ref\Milestone7_backend.dll
+C:\Users\harmo\Documents\GitHub\Milestone7\backend\Milestone7_backend\Milestone7_backend\bin\Debug\net8.0\BCrypt.Net-Next.dll

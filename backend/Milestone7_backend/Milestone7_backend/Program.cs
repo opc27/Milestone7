@@ -24,7 +24,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite("Data Source=templeprepdata.db"));
 
-// Define allowed frontend ports (3000-3100) - does this do anything?
+// Define allowed frontend ports (3000-3100) - this makes it so that if for some reason port 3000 is occupied on your computer, it'll accept whatever other port the frontend uses.
 var allowedOrigins = Enumerable.Range(3000, 101)  // Ports 3000-3100
     .Select(port => $"http://localhost:{port}")
     .ToArray();
