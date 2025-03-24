@@ -23,6 +23,17 @@ namespace Milestone7_backend.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestModel model)
         {
+
+            var sessionId = Guid.NewGuid().ToString();
+            HttpContext.Response.Cookies.Append("userSession", sessionId, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = false, // set to true if everything is https
+                SameSite = SameSiteMode.Strict, // if CORS gets mad change this
+                Expires = DateTime.Now.AddHours(1) // expires every hour
+
+            });
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 

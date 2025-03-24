@@ -8,6 +8,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:3000")
+                .AllowCredentials()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
 // Configure SQLite database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite("Data Source=templeprepdata.db"));
@@ -28,7 +40,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors(x => x.WithOrigins("http://localhost:3000").AllowAnyHeader()); //idk man it broke before so I added AllowAnyHeader
+app.UseCors("AllowFrontend"); //idk man it broke before so I added AllowAnyHeader
 
 app.UseAuthorization();
 
