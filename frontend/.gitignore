@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-obj/
+/obj/
 bin/
 
 /backend/Milestone7_backend/Milestone7_backend/obj/
