@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './LoginPage.module.css';
+import { useScripture } from '../../contexts/ScriptureContext';
 
 const StatusBar = () => (
   <header className={styles.statusBar}>
@@ -19,6 +20,8 @@ const LoginForm = () => {
   const [username, setUsername] = useState('AnnaMarie401@byuis.com');
   const [password, setPassword] = useState('●●●●●●●●●●●●');
   const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
+  const { refreshScripture } = useScripture();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,8 +46,15 @@ const LoginForm = () => {
         const data = await response.json();
         console.log('Login successful', data);
         setError(null); // Reset error on success
+        
+        // Fetch a new random scripture
+        await refreshScripture();
+        
         // You can store the user ID or token here if needed
         // localStorage.setItem("userId", data.userId);
+        
+        // Navigate to the home page after successful login
+        navigate('/');
       }
     } catch (err) {
       setError('There was an issue with the request.');

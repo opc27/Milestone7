@@ -7,6 +7,7 @@ import ChatbotPage from "./components/chatbot/ChatInterface";
 import { ModuleList } from "./components/modules/ModuleList";
 import { ModulePage } from "./components/modules/ModulePage";
 import { ModuleProvider } from "./components/modules/ModuleContext";
+import { ScriptureProvider } from "./contexts/ScriptureContext";
 import { Header } from "./components/sharedLayout/Header";
 import { StatusBar } from "./components/sharedLayout/StatusBar";
 // import { BottomBar } from "./components/sharedLayout/BottomBar";
@@ -37,9 +38,11 @@ const AppContent = () => {
 function App() {
   return (
     <Router>
-      <ModuleProvider>
-        <AppContent />
-      </ModuleProvider>
+      <ScriptureProvider>
+        <ModuleProvider>
+          <AppContent />
+        </ModuleProvider>
+      </ScriptureProvider>
     </Router>
   );
 }
