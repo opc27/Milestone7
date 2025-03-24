@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Milestone7_backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6b82d9eeff451efe918bc3a21658301453b6bbb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3f2613866dba7cc8e0ee28afe5cb7fbd436cd01")]
 [assembly: System.Reflection.AssemblyProductAttribute("Milestone7_backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Milestone7_backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
