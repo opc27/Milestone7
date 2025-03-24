@@ -1,67 +1,49 @@
 "use client";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./ModuleList.module.css";
-// import { Header } from "./Header";
 import { ModuleCard } from "./ModuleCard";
-// import { ProgressBar } from "./ProgressBar";
-// import { ChatButton } from "./ChatButton";
-import { ModuleData } from "./types";
-
-const modules: ModuleData[] = [
-  {
-    id: 0,
-    title: "Module 0",
-    subtitle: "Course Overview",
-    status: "completed",
-  },
-  { id: 1, title: "Module 1", subtitle: "Introduction", status: "completed" },
-  {
-    id: 2,
-    title: "Module 2",
-    subtitle: "Understanding the Temple",
-    status: "active",
-  },
-  {
-    id: 3,
-    title: "Module 3",
-    subtitle: "The Plan of Salvation",
-    status: "locked",
-  },
-  {
-    id: 4,
-    title: "Module 4",
-    subtitle: "Covenants and Ordinances",
-    status: "locked",
-  },
-  {
-    id: 5,
-    title: "Module 5",
-    subtitle: "Priesthood Blessings",
-    status: "locked",
-  },
-  { id: 6, title: "Module 6", subtitle: "Initiatory", status: "locked" },
-  { id: 7, title: "Module 7", subtitle: "Temple Garments", status: "locked" },
-  {
-    id: 8,
-    title: "Module 8",
-    subtitle: "The Endowment Ceremony",
-    status: "locked",
-  },
-  { id: 9, title: "Module 9", subtitle: "Temple Worthiness", status: "locked" },
-  { id: 10, title: "Module 10", subtitle: "Summary", status: "locked" },
-];
+import { useModuleContext } from "./ModuleContext";
 
 export const ModuleList: React.FC = () => {
+  const { modules } = useModuleContext();
+  const navigate = useNavigate();
+
+  // Handle module click
+  const handleModuleClick = (moduleId: number) => {
+    // Find the clicked module
+    const clickedModule = modules.find(m => m.id === moduleId);
+    
+    if (!clickedModule) return;
+    
+    // Check if all previous modules are completed
+    const isPreviousModulesCompleted = modules
+      .filter(m => m.id < moduleId)
+      .every(m => m.status === 'completed');
+    
+    // If module is locked and previous modules are not completed, don't allow access
+    if (clickedModule.status === 'locked' && !isPreviousModulesCompleted) {
+      console.log('Cannot access this module until previous modules are completed');
+      return;
+    }
+    
+    // Navigate to the module page
+    navigate(`/modules/${moduleId}`);
+  };
+
   return (
     <main className={styles.container}>
-      {/* <Header /> */}
+      <h1 className={styles.pageTitle}>Temple Preparation Modules</h1>
       <section className={styles.moduleList}>
         {modules.map((module) => (
-          <ModuleCard key={module.id} module={module} />
+          <ModuleCard 
+            key={module.id} 
+            module={module} 
+            allModules={modules}
+            onModuleClick={handleModuleClick}
+          />
         ))}
       </section>
-      {/* <ProgressBar progress={20} />
-      <ChatButton /> */}
     </main>
   );
 };

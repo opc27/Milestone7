@@ -5,6 +5,8 @@ import { InputDesign } from "./components/index.js/InputDesign";
 import ChatbotPage from "./components/chatbot/ChatInterface";
 import { ChatButton } from "./components/sharedLayout/ChatButton";
 import { ModuleList } from "./components/modules/ModuleList";
+import { ModulePage } from "./components/modules/ModulePage";
+import { ModuleProvider } from "./components/modules/ModuleContext";
 import { Header } from "./components/sharedLayout/Header";
 import { StatusBar } from "./components/sharedLayout/StatusBar";
 import { BottomBar } from "./components/sharedLayout/BottomBar";
@@ -24,6 +26,7 @@ const AppContent = () => {
         <Route path="/" element={<InputDesign />} />
         <Route path="/chatbot" element={<ChatbotPage />} />
         <Route path="/modules" element={<ModuleList />} />
+        <Route path="/modules/:moduleId" element={<ModulePage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
       {/* Only show ChatButton and BottomBar if not on the chatbot page */}
@@ -40,7 +43,9 @@ const AppContent = () => {
 function App() {
   return (
     <Router>
-      <AppContent />
+      <ModuleProvider>
+        <AppContent />
+      </ModuleProvider>
     </Router>
   );
 }
