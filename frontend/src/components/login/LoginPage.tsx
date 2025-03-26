@@ -100,7 +100,13 @@ const HelpSection = () => {
   return (
     <nav className={styles.helpLinks}>
       <div className={styles.accountLinks}>
-        <a href="#" className={styles.link}>
+        <a
+          href="#"
+          className={styles.link}
+          onClick={(e) => {
+            navigate('/forgot');
+          }}
+        >
           Forgot username/password?
         </a>
         <a
