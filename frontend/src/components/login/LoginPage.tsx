@@ -54,7 +54,7 @@ const LoginForm = () => {
         // localStorage.setItem("userId", data.userId);
         
         // Navigate to the home page after successful login
-        navigate('/');
+        navigate('/home');
       }
     } catch (err) {
       setError('There was an issue with the request.');
