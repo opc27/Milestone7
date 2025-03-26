@@ -38,5 +38,30 @@ namespace Milestone7_backend.Controllers
 
             return Ok(userList);
         }
+
+        // Add a route to update the current module of a specific user
+        [HttpPut("{userId}/updateModule")]
+        public async Task<IActionResult> UpdateCurrentModule(int userId, [FromBody] UpdateModuleRequest request)
+        {
+            if (request == null || request.CurrentModule < 1)
+            {
+                return BadRequest("Invalid module number.");
+            }
+
+            // Find the user with the given userId
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
+
+            // Update the current module
+            user.CurrentModule = request.CurrentModule;
+
+            // Save changes to the database
+            await _context.SaveChangesAsync();
+
+            return Ok(new { userId = user.UserId, currentModule = user.CurrentModule });
+        }
     }
 }

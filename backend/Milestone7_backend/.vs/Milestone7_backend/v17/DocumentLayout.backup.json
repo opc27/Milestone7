@@ -1,22 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\",
+  "WorkspaceRootPath": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\harmo\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\harmo\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\andrew allred\\documents\\school\\2025_winter\\is 401 - project management \u0026 systems design\\finalsprint\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\harmo\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\templescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\andrew allred\\documents\\school\\2025_winter\\is 401 - project management \u0026 systems design\\finalsprint\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\andrew allred\\documents\\school\\2025_winter\\is 401 - project management \u0026 systems design\\finalsprint\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\andrew allred\\documents\\school\\2025_winter\\is 401 - project management \u0026 systems design\\finalsprint\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\andrew allred\\documents\\school\\2025_winter\\is 401 - project management \u0026 systems design\\finalsprint\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\templescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\controllers\\templescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\harmo\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\andrew allred\\documents\\school\\2025_winter\\is 401 - project management \u0026 systems design\\finalsprint\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\andrew allred\\documents\\school\\2025_winter\\is 401 - project management \u0026 systems design\\finalsprint\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\updatemodulerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\controllers\\updatemodulerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\andrew allred\\documents\\school\\2025_winter\\is 401 - project management \u0026 systems design\\finalsprint\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,60 +42,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Milestone7_backend\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-26T21:56:58.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Models\\User.cs",
+              "RelativeToolTip": "Milestone7_backend\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T21:56:48.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\appsettings.json",
+              "RelativeDocumentMoniker": "Milestone7_backend\\appsettings.json",
+              "ToolTip": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\appsettings.json",
+              "RelativeToolTip": "Milestone7_backend\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-26T21:56:08.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateModuleRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\UpdateModuleRequest.cs",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Controllers\\UpdateModuleRequest.cs",
+              "ToolTip": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\UpdateModuleRequest.cs",
+              "RelativeToolTip": "Milestone7_backend\\Controllers\\UpdateModuleRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T21:52:24.866Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Program.cs",
               "RelativeDocumentMoniker": "Milestone7_backend\\Program.cs",
-              "ToolTip": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Program.cs",
+              "ToolTip": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Program.cs",
               "RelativeToolTip": "Milestone7_backend\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T22:12:08.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Milestone7_backend\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Milestone7_backend\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowB8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T21:02:20.576Z"
+              "WhenOpened": "2025-03-17T21:02:20.576Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TemplesController.cs",
-              "DocumentMoniker": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\TemplesController.cs",
+              "DocumentMoniker": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\TemplesController.cs",
               "RelativeDocumentMoniker": "Milestone7_backend\\Controllers\\TemplesController.cs",
-              "ToolTip": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\TemplesController.cs",
+              "ToolTip": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\TemplesController.cs",
               "RelativeToolTip": "Milestone7_backend\\Controllers\\TemplesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T21:01:45.266Z"
+              "WhenOpened": "2025-03-17T21:01:45.266Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "EventsController.cs",
-              "DocumentMoniker": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\EventsController.cs",
+              "DocumentMoniker": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\EventsController.cs",
               "RelativeDocumentMoniker": "Milestone7_backend\\Controllers\\EventsController.cs",
-              "ToolTip": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Users\\Andrew Allred\\Documents\\School\\2025_Winter\\IS 401 - Project Management \u0026 Systems Design\\FinalSprint\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\EventsController.cs",
               "RelativeToolTip": "Milestone7_backend\\Controllers\\EventsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T21:01:22.869Z"
+              "WhenOpened": "2025-03-17T21:01:22.869Z",
+              "EditorCaption": ""
             }
           ]
         }
