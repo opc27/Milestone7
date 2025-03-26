@@ -43,6 +43,7 @@ export const ModuleProvider: React.FC<ModuleProviderProps> = ({ children }) => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
+        //Fetch information of user - including currentModule
         const response = await fetch(`http://localhost:5000/users/${userId}`);
         if (!response.ok) throw new Error('Failed to fetch user data');
 
