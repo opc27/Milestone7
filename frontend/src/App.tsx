@@ -24,11 +24,11 @@ const AppContent = () => {
       <StatusBar />
       <Header />
       <Routes>
-        <Route path="/" element={<InputDesign />} />
+        <Route path="/home" element={<InputDesign />} />
         <Route path="/chatbot" element={<ChatbotPage />} />
         <Route path="/modules" element={<ModuleList />} />
         <Route path="/modules/:moduleId" element={<ModulePage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/" element={<LoginPage />} />
       </Routes>
       {/* Chat button and bottom bar removed as requested */}
     </>
