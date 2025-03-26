@@ -3,6 +3,8 @@ import { useState } from 'react';
 const AddUser = () => {
   const [user, setUser] = useState({
     name: '',
+    username: '',
+    email: '',
     password: '',
   });
 
@@ -23,7 +25,7 @@ const AddUser = () => {
       <h2>Create Account</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Name</label>
+          <label>Name </label>
           <input
             type="text"
             name="name"
@@ -32,8 +34,31 @@ const AddUser = () => {
             required
           />
         </div>
+        <br />
         <div>
-          <label>Password</label>
+          <label>Username </label>
+          <input
+            type="text"
+            name="username"
+            value={user.username}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label>Email </label>
+          <input
+            type="email"
+            name="email"
+            value={user.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label>Password </label>
           <input
             type="password"
             name="password"
@@ -42,6 +67,7 @@ const AddUser = () => {
             required
           />
         </div>
+        <br />
         <button type="submit">Create Account</button>
       </form>
     </div>

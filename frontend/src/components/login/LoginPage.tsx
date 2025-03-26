@@ -108,7 +108,7 @@ const HelpSection = () => {
           className={styles.link}
           onClick={(e) => {
             e.preventDefault(); // Prevent default link behavior
-            navigate('"/index/CreateAccount"'); // Redirect to CreateAccount page
+            navigate('/createAccount'); // Redirect to CreateAccount page
           }}
         >
           Create an Account
