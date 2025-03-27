@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
   useLocation,
+  useNavigate,
 } from 'react-router-dom';
 import { InputDesign } from './components/index.js/InputDesign';
 import ChatbotPage from './components/chatbot/ChatInterface';
@@ -19,6 +20,7 @@ import { ModuleProvider } from "./components/modules/ModuleContext";
 import { ScriptureProvider } from "./contexts/ScriptureContext";
 import { useState, useEffect } from "react";
 import { checkAuth } from "./components/login/auth.ts";
+import { ModulePage } from './components/modules/ModulePage.tsx';
 
 
 // Create a wrapper component to use the useLocation hook
