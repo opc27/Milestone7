@@ -10,8 +10,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontend",
-        policy =>
+    options.AddPolicy("AllowFrontend", policy =>
         {
             policy.WithOrigins("http://localhost:3000")
                 .AllowCredentials()
@@ -40,7 +39,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowFrontend"); //idk man it broke before so I added AllowAnyHeader
+app.UseCors("AllowFrontend");
 
 app.UseAuthorization();
 

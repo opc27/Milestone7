@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MenuIcon } from "./Icons"; // Make sure this is the correct path
 import styles from "./Header.module.css"; // Make sure to create this CSS file
+import { logout } from '../login/logout.ts';
 
 export const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,7 +33,7 @@ export const Header: React.FC = () => {
           <Link to="/home" className={styles.menuItem}>Home</Link>
           <Link to="/modules" className={styles.menuItem}>Modules</Link>
           <Link to="/chatbot" className={styles.menuItem}>Chatbot</Link>
-          <Link to="/" className={styles.menuItem}>Log Out</Link>
+          <button onClick={logout} className={styles.menuItem}>Log Out</button>
         </div>
       )}
     </header>

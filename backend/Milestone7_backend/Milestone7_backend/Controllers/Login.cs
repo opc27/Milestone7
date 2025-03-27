@@ -29,7 +29,7 @@ namespace Milestone7_backend.Controllers
             {
                 HttpOnly = true,
                 Secure = false, // set to true if everything is https
-                SameSite = SameSiteMode.Strict, // if CORS gets mad change this
+                SameSite = SameSiteMode.Strict, // if CORS gets mad change this to None
                 Expires = DateTime.Now.AddHours(1) // expires every hour
 
             });
@@ -56,5 +56,26 @@ namespace Milestone7_backend.Controllers
             Console.WriteLine("Login successful!");
             return Ok(new { message = "Login successful", userId = user.UserId });
         }
+
+        [HttpGet("protected")]
+        public IActionResult ProtectedEndpoint()
+        {
+            // Check if the user has a session cookie
+            if (!HttpContext.Request.Cookies.TryGetValue("userSession", out string? sessionToken))
+                return Unauthorized(new { message = "Not authenticated" });
+
+            // Session exists, so user is authenticated
+            return Ok(new { message = "You are authenticated!" });
+        }
+
+        [HttpPost("logout")]
+        public IActionResult Logout()
+        {
+            // Remove the session cookie
+            HttpContext.Response.Cookies.Delete("userSession");
+
+            return Ok(new { message = "Logout successful" });
+        }
+
     }
 }
