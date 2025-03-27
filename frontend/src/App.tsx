@@ -16,6 +16,7 @@ import LoginPage from './components/login/LoginPage';
 import CreateAccount from './components/index.js/CreateAccount';
 import ForgotUsername from './components/index.js/ForgotUsername';
 
+
 // Create a wrapper component to use the useLocation hook
 const AppContent = () => {
   const location = useLocation();
@@ -27,20 +28,16 @@ const AppContent = () => {
       <StatusBar />
       <Header />
       <Routes>
-        <Route path="/" element={<InputDesign />} />
+        <Route path="/home" element={<InputDesign />} />
         <Route path="/chatbot" element={<ChatbotPage />} />
         <Route path="/modules" element={<ModuleList />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/createAccount" element={<CreateAccount />} />
         <Route path="/forgot" element={<ForgotUsername />} />
+        <Route path="/modules/:moduleId" element={<ModulePage />} />
+        <Route path="/" element={<LoginPage />} />
       </Routes>
-      {/* Only show ChatButton and BottomBar if not on the chatbot page */}
-      {!isChatbotPage && (
-        <>
-          <ChatButton />
-          <BottomBar />
-        </>
-      )}
+      {/* Chat button and bottom bar removed as requested */}
     </>
   );
 };
@@ -48,7 +45,11 @@ const AppContent = () => {
 function App() {
   return (
     <Router>
-      <AppContent />
+      <ScriptureProvider>
+        <ModuleProvider>
+          <AppContent />
+        </ModuleProvider>
+      </ScriptureProvider>
     </Router>
   );
 }

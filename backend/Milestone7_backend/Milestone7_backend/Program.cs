@@ -8,11 +8,23 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:3000")
+                .AllowCredentials()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
 // Configure SQLite database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite("Data Source=templeprepdata.db"));
 
-// Define allowed frontend ports (3000-3100)
+// Define allowed frontend ports (3000-3100) - this makes it so that if for some reason port 3000 is occupied on your computer, it'll accept whatever other port the frontend uses.
 var allowedOrigins = Enumerable.Range(3000, 101)  // Ports 3000-3100
     .Select(port => $"http://localhost:{port}")
     .ToArray();
@@ -28,7 +40,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors(x => x.WithOrigins("http://localhost:3003"));
+app.UseCors("AllowFrontend"); //idk man it broke before so I added AllowAnyHeader
 
 app.UseAuthorization();
 

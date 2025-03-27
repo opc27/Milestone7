@@ -29,10 +29,10 @@ export const Header: React.FC = () => {
       {/* Dropdown Menu */}
       {menuOpen && (
         <div className={styles.dropdownMenu}>
-          <Link to="/" className={styles.menuItem}>Home</Link>
+          <Link to="/home" className={styles.menuItem}>Home</Link>
           <Link to="/modules" className={styles.menuItem}>Modules</Link>
           <Link to="/chatbot" className={styles.menuItem}>Chatbot</Link>
-          <Link to="/login" className={styles.menuItem}>Log Out</Link>
+          <Link to="/" className={styles.menuItem}>Log Out</Link>
         </div>
       )}
     </header>

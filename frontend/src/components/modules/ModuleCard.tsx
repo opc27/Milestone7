@@ -1,10 +1,36 @@
 import React from 'react';
 import styles from './ModuleCard.module.css';
-import { ModuleCardProps } from './types';
+import { ModuleCardProps, ModuleData } from './types';
 
-export const ModuleCard: React.FC<ModuleCardProps> = ({ module }) => {
+interface ExtendedModuleCardProps extends ModuleCardProps {
+  allModules?: ModuleData[];
+  onModuleClick?: (moduleId: number) => void;
+}
+
+export const ModuleCard: React.FC<ExtendedModuleCardProps> = ({ 
+  module, 
+  allModules = [], 
+  onModuleClick 
+}) => {
+  const handleModuleClick = () => {
+    // Check if all previous modules are completed
+    const isPreviousModulesCompleted = allModules
+      .filter(m => m.id < module.id)
+      .every(m => m.status === 'completed');
+    
+    // If module is locked and previous modules are not all completed, don't allow click
+    if (module.status === 'locked' && !isPreviousModulesCompleted) {
+      console.log('Cannot access this module until previous modules are completed');
+      return;
+    }
+    
+    // If module is active or completed, or if all previous modules are completed, allow click
+    if (onModuleClick) {
+      onModuleClick(module.id);
+    }
+  };
   const getStatusIcon = () => {
-    switch (module.status) {
+    switch (effectiveStatus) {
       case 'completed':
         return (
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,8 +55,22 @@ export const ModuleCard: React.FC<ModuleCardProps> = ({ module }) => {
     }
   };
 
+  // Determine if this module should be accessible
+  const isPreviousModulesCompleted = allModules
+    .filter(m => m.id < module.id)
+    .every(m => m.status === 'completed');
+  
+  // Force locked status if previous modules are not completed
+  const effectiveStatus = (!isPreviousModulesCompleted && module.status !== 'completed') 
+    ? 'locked' 
+    : module.status;
+
   return (
-    <article className={`${styles.moduleCard} ${styles[module.status]}`}>
+    <article 
+      className={`${styles.moduleCard} ${styles[effectiveStatus]}`}
+      onClick={handleModuleClick}
+      style={{ cursor: effectiveStatus === 'locked' ? 'not-allowed' : 'pointer' }}
+    >
       <h2 className={styles.title}>{module.title}</h2>
       <p className={styles.subtitle}>{module.subtitle}</p>
       <div className={styles.statusIcon}>

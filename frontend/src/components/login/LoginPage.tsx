@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './LoginPage.module.css';
+import { useScripture } from '../../contexts/ScriptureContext';
 
 const StatusBar = () => (
   <header className={styles.statusBar}>
@@ -16,14 +17,48 @@ const StatusBar = () => (
 );
 
 const LoginForm = () => {
-  const [email, setEmail] = useState('AnnaMarie401@byuis.com');
+  const [username, setUsername] = useState('AnnaMarie401@byuis.com');
   const [password, setPassword] = useState('●●●●●●●●●●●●');
+  const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
+  const { refreshScripture } = useScripture();
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you can add your authentication logic
-    navigate('/'); // Redirect to the home page
+
+    const loginData = { username, password };
+
+    try {
+      //I have no idea why but it gives a CORS error if it's http and https; this way it throws different errors that make more sense.
+      const response = await fetch('https://localhost:5000/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+        body: JSON.stringify(loginData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        setError(errorData.message || 'An error occurred');
+      } else {
+        const data = await response.json();
+        console.log('Login successful', data);
+        setError(null); // Reset error on success
+        
+        // Fetch a new random scripture
+        await refreshScripture();
+        
+        // You can store the user ID or token here if needed
+        // localStorage.setItem("userId", data.userId);
+        
+        // Navigate to the home page after successful login
+        navigate('/');
+      }
+    } catch (err) {
+      setError('There was an issue with the request.');
+    }
   };
 
   return (
@@ -42,8 +77,8 @@ const LoginForm = () => {
           <label className={styles.inputLabel}>Email/Username</label>
           <input
             type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             className={styles.input}
           />
         </div>
