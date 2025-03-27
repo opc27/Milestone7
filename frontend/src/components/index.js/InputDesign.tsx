@@ -6,8 +6,10 @@ import { SpiritualThought } from "./SpiritualThought";
 import { ArrowIcon } from "../sharedLayout/Icons";
 import styles from "./InputDesign.module.css";
 import UpcomingEvents from "./Events/UpcomingEvents";
+import { useNavigate } from "react-router-dom";
 
 export const InputDesign: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <>
       <link
@@ -17,7 +19,7 @@ export const InputDesign: React.FC = () => {
       <main className={styles.appContainer}>
         <WelcomeSection />
         {/*This just reloads the page for now but should be updated once we have the info for retaining user progress*/}
-        <button className={styles.pickupButton} onClick={() => window.location.href = window.location.href}>
+        <button className={styles.pickupButton} onClick={() => navigate('/modules')}>
           <span>Pick up where you left off</span>
           <ArrowIcon />
         </button>
