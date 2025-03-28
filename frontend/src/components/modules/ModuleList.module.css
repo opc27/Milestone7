@@ -1,8 +1,9 @@
 .container {
     min-height: 100vh;
-    background-color: #fff;
+    background-color: rgba(128, 128, 128, 0.02);
     flex-direction: column;
     display: flex;
+    width: 428px;
   }
   
   .pageTitle {

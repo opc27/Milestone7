@@ -1,6 +1,6 @@
 .div {
   width: 100%;
-  max-width: 393px;
+  max-width: 428px;
   margin: 40px auto;
   padding: 0 16px;
 }
@@ -9,6 +9,8 @@
   border: 3px solid #006d3a;
   border-radius: 12px;
   padding: 16px;
+  width: 360px;
+  margin: auto;
 }
 .eventTitle {
   color: #006d3a;
@@ -60,6 +62,8 @@
   border: 3px solid #006d3a;
   border-radius: 12px;
   padding: 16px;
+  width: 360px;
+  margin: auto;
 }
 .editEventTitle {
   color: #006d3a;

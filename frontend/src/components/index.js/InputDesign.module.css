@@ -1,9 +1,10 @@
 .appContainer {
   background-color: #fcfcfc;
-  width: 393px;
+  width: 428px;
   height: 852px;
   font-family: Roboto, sans-serif;
   position: relative;
+  transform: translateY(-40px);
 }
 @media (width<=991px) {
   .appContainer {
