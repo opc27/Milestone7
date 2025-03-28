@@ -16,17 +16,16 @@ import { BottomBar } from './components/sharedLayout/BottomBar';
 import LoginPage from './components/login/LoginPage';
 import CreateAccount from './components/index.js/CreateAccount';
 import ForgotUsername from './components/index.js/ForgotUsername';
-import { ModuleProvider } from "./components/modules/ModuleContext";
-import { ScriptureProvider } from "./contexts/ScriptureContext";
-import { useState, useEffect } from "react";
-import { checkAuth } from "./components/login/auth.ts";
+import { ModuleProvider } from './components/modules/ModuleContext';
+import { ScriptureProvider } from './contexts/ScriptureContext';
+import { useState, useEffect } from 'react';
+import { checkAuth } from './components/login/auth.ts';
 import { ModulePage } from './components/modules/ModulePage.tsx';
-
 
 // Create a wrapper component to use the useLocation hook
 const AppContent = () => {
   const location = useLocation();
-  const isChatbotPage = location.pathname === "/chatbot";
+  const isChatbotPage = location.pathname === '/chatbot';
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
 
@@ -35,18 +34,17 @@ const AppContent = () => {
       const authStatus = await checkAuth();
       setIsAuthenticated(authStatus);
 
-    if (!authStatus && location.pathname !== "/") {
-      navigate("/");
-    }
-  }
+      if (!authStatus && location.pathname !== '/') {
+        navigate('/');
+      }
+    };
 
-  verifyAuth();
-}, [location.pathname, navigate]);
+    verifyAuth();
+  }, [location.pathname, navigate]);
 
   if (isAuthenticated === null) {
     return <div>Loading...</div>;
   }
-
 
   return (
     <>

@@ -17,8 +17,8 @@ const StatusBar = () => (
 );
 
 const LoginForm = () => {
-  const [username, setUsername] = useState('AnnaMarie401@byuis.com');
-  const [password, setPassword] = useState('●●●●●●●●●●●●');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
   const { refreshScripture } = useScripture();
@@ -167,23 +167,23 @@ const HelpSection = () => {
   );
 };
 
-const ChatButton = () => (
-  <div className={styles.chatButton}>
-    <button className={styles.chatButtonInner} aria-label="Open chat">
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `<svg id="I1:510;51525:5017" layer-name="Unselected-icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[24px] h-[24px]"> <path d="M22.5 22.5V4.5C22.5 3.95 22.3042 3.47917 21.9125 3.0875C21.5208 2.69583 21.05 2.5 20.5 2.5H4.5C3.95 2.5 3.47917 2.69583 3.0875 3.0875C2.69583 3.47917 2.5 3.95 2.5 4.5V16.5C2.5 17.05 2.69583 17.5208 3.0875 17.9125C3.47917 18.3042 3.95 18.5 4.5 18.5H18.5L22.5 22.5Z" fill="#FFF9FF"></path> </svg>`,
-        }}
-      />
-    </button>
-  </div>
-);
+// const ChatButton = () => (
+//   <div className={styles.chatButton}>
+//     <button className={styles.chatButtonInner} aria-label="Open chat">
+//       <div
+//         dangerouslySetInnerHTML={{
+//           __html: `<svg id="I1:510;51525:5017" layer-name="Unselected-icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[24px] h-[24px]"> <path d="M22.5 22.5V4.5C22.5 3.95 22.3042 3.47917 21.9125 3.0875C21.5208 2.69583 21.05 2.5 20.5 2.5H4.5C3.95 2.5 3.47917 2.69583 3.0875 3.0875C2.69583 3.47917 2.5 3.95 2.5 4.5V16.5C2.5 17.05 2.69583 17.5208 3.0875 17.9125C3.47917 18.3042 3.95 18.5 4.5 18.5H18.5L22.5 22.5Z" fill="#FFF9FF"></path> </svg>`,
+//         }}
+//       />
+//     </button>
+//   </div>
+// );
 
 const LoginPage = () => {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.contentWrapper}>
-        <StatusBar />
+        {/* <StatusBar /> */}
 
         <main className={styles.mainContent}>
           <h2 className={styles.welcomeText}>Welcome to</h2>
@@ -193,7 +193,7 @@ const LoginPage = () => {
           <HelpSection />
         </main>
 
-        <ChatButton />
+        {/* <ChatButton /> */}
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./ModuleList.module.css";
 import { ModuleCard } from "./ModuleCard";
 import { useModuleContext } from "./ModuleContext";
+import { ChatButton } from "../sharedLayout/ChatButton";
 
 export const ModuleList: React.FC = () => {
   const { modules } = useModuleContext();
@@ -44,6 +45,8 @@ export const ModuleList: React.FC = () => {
           />
         ))}
       </section>
+              <ChatButton />
+      
     </main>
   );
 };

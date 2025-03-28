@@ -1,6 +1,6 @@
-"use client";
-import * as React from "react";
-import styles from "./ChatInterface.module.css";
+'use client';
+import * as React from 'react';
+import styles from './ChatInterface.module.css';
 
 export default function ChatInterface() {
   return (

@@ -7,9 +7,12 @@ import { ArrowIcon } from "../sharedLayout/Icons";
 import styles from "./InputDesign.module.css";
 import UpcomingEvents from "./Events/UpcomingEvents";
 import { useNavigate } from "react-router-dom";
+import { ChatButton } from "../sharedLayout/ChatButton";
 
 export const InputDesign: React.FC = () => {
   const navigate = useNavigate();
+
+
   return (
     <>
       <link
@@ -26,7 +29,11 @@ export const InputDesign: React.FC = () => {
         <TempleCard />
         <UpcomingEvents />
         <SpiritualThought />
+        <ChatButton />
+        
       </main>
+
+
     </>
   );
 };
