@@ -38,5 +38,33 @@ namespace Milestone7_backend.Controllers
 
             return Ok(userList);
         }
+
+        [HttpGet("{userId}")]
+        public async Task<IActionResult> GetUserById(int userId)
+        {
+            var user = await _context.Users
+                .Include(u => u.Temple) // Join with the Temple table
+                .Where(u => u.UserId == userId)
+                .Select(u => new
+                {
+                    u.UserId,
+                    u.Username,
+                    u.Firstname,
+                    u.Lastname,
+                    u.ProfilePicSrc,
+                    TempleName = u.Temple != null ? u.Temple.TempleName : "No Temple", // Handle potential null value
+                    u.CurrentModule
+                })
+                .FirstOrDefaultAsync();
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
+        }
+
+
     }
 }

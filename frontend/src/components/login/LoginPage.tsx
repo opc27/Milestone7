@@ -51,10 +51,10 @@ const LoginForm = () => {
         await refreshScripture();
         
         // You can store the user ID or token here if needed
-        // localStorage.setItem("userId", data.userId);
+        localStorage.setItem("userId", data.userId);
         
         // Navigate to the home page after successful login
-        navigate('/');
+        navigate('/home');
       }
     } catch (err) {
       setError('There was an issue with the request.');
@@ -174,6 +174,7 @@ const ChatButton = () => (
 );
 
 const LoginPage = () => {
+
   return (
     <div className={styles.pageContainer}>
       <div className={styles.contentWrapper}>
