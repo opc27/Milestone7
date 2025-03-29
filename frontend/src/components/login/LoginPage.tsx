@@ -45,8 +45,12 @@ const LoginForm = () => {
       } else {
         const data = await response.json();
         console.log('Login successful', data);
+        console.log('Received userId:', data.userId);
+
         setError(null); // Reset error on success
         
+        // Store the userId
+        localStorage.setItem("userId", data.userId);
         // Fetch a new random scripture
         await refreshScripture();
         

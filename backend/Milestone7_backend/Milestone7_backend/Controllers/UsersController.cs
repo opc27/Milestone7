@@ -38,5 +38,16 @@ namespace Milestone7_backend.Controllers
 
             return Ok(userList);
         }
+
+        [HttpGet("{userId}/currentModule")]
+        public async Task<IActionResult> GetCurrentModule(int userId)
+        {
+            var user = await _context.Users.FindAsync(userId);
+
+            if (user == null)
+                return NotFound(new { message = "User not found" });
+
+            return Ok(new { currentModule = user.CurrentModule });
+        }
     }
 }
