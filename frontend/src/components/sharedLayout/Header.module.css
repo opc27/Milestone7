@@ -53,19 +53,31 @@
     z-index: 100;
   }
   
-  .menuItem {
-    padding: 10px;
-    text-decoration: none;
-    color: green;
-    border-bottom: 1px solid green;
-    text-align: center;
-  }
-  
+
   .menuItem:last-child {
     border-bottom: none;
+  }
+
+  .menuItem {
+    all: unset; /* Fully resets both <a> and <button> styles */
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: green;
+    background-color: white;
+    border-bottom: 1px solid green;
+    cursor: pointer;
+    font: inherit;
+    line-height: 1.5;
+    text-decoration: none; /* Just to be safe */
+    box-sizing: border-box;
   }
   
   .menuItem:hover {
     background-color: rgba(0, 128, 0, 0.1);
   }
+  
+  
+  
   

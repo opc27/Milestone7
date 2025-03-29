@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { MenuIcon } from "./Icons"; // Make sure this is the correct path
-import styles from "./Header.module.css"; // Make sure to create this CSS file
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { MenuIcon } from './Icons'; // Make sure this is the correct path
+import styles from './Header.module.css'; // Make sure to create this CSS file
 import { logout } from '../login/logout.ts';
 
 export const Header: React.FC = () => {
@@ -13,7 +13,11 @@ export const Header: React.FC = () => {
 
   return (
     <header className={styles.header}>
-      <button className={styles.menuButton} onClick={toggleMenu} aria-label="Menu">
+      <button
+        className={styles.menuButton}
+        onClick={toggleMenu}
+        aria-label="Menu"
+      >
         <div className={styles.menuIconContainer}>
           <MenuIcon />
         </div>
@@ -30,10 +34,36 @@ export const Header: React.FC = () => {
       {/* Dropdown Menu */}
       {menuOpen && (
         <div className={styles.dropdownMenu}>
-          <Link to="/home" className={styles.menuItem}>Home</Link>
-          <Link to="/modules" className={styles.menuItem}>Modules</Link>
-          <Link to="/chatbot" className={styles.menuItem}>Chatbot</Link>
-          <button onClick={logout} className={styles.menuItem}>Log Out</button>
+          <Link
+            to="/home"
+            className={styles.menuItem}
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="/modules"
+            className={styles.menuItem}
+            onClick={() => setMenuOpen(false)}
+          >
+            Modules
+          </Link>
+          <Link
+            to="/chatbot"
+            className={styles.menuItem}
+            onClick={() => setMenuOpen(false)}
+          >
+            Chatbot
+          </Link>
+          <button
+            onClick={() => {
+              setMenuOpen(false);
+              logout();
+            }}
+            className={styles.menuItem}
+          >
+            Log Out
+          </button>
         </div>
       )}
     </header>
