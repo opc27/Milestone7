@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Milestone7_backend.Data;
+using Microsoft.AspNetCore.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,22 +12,25 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
-        {
-            policy.WithOrigins("http://localhost:3000")
-                .AllowCredentials()
-                .AllowAnyHeader()
-                .AllowAnyMethod();
-        });
+    {
+        policy.WithOrigins("http://localhost:3000", "http://localhost:5173")
+              .AllowCredentials()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
 });
 
 // Configure SQLite database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite("Data Source=templeprepdata.db"));
 
-// Define allowed frontend ports (3000-3100) - this makes it so that if for some reason port 3000 is occupied on your computer, it'll accept whatever other port the frontend uses.
-var allowedOrigins = Enumerable.Range(3000, 101)  // Ports 3000-3100
-    .Select(port => $"http://localhost:{port}")
-    .ToArray();
+// Register the custom authentication scheme using our AuthenticationHandler.
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = "Custom";
+    options.DefaultChallengeScheme = "Custom";
+})
+.AddScheme<AuthenticationSchemeOptions, AuthenticationHandler>("Custom", options => { });
 
 var app = builder.Build();
 
@@ -41,6 +45,8 @@ app.UseHttpsRedirection();
 
 app.UseCors("AllowFrontend");
 
+// Enable authentication middleware.
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

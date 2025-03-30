@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\",
+  "WorkspaceRootPath": "C:\\Users\\turne\\Desktop\\Winter 2025\\401\\Milestone\\Milestone7\\backend\\Milestone7_backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\harmo\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\turne\\desktop\\winter 2025\\401\\milestone\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\turne\\desktop\\winter 2025\\401\\milestone\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\harmo\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\turne\\desktop\\winter 2025\\401\\milestone\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\harmo\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\templescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\controllers\\templescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\harmo\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\turne\\desktop\\winter 2025\\401\\milestone\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\turne\\desktop\\winter 2025\\401\\milestone\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\authenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\controllers\\authenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +30,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6d4078d1-5951-4ed1-ac0e-0a8099c1cce5}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -35,51 +51,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Program.cs",
-              "RelativeDocumentMoniker": "Milestone7_backend\\Program.cs",
-              "ToolTip": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Program.cs",
-              "RelativeToolTip": "Milestone7_backend\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBwAAAAvAAAAAAAAAA==",
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\turne\\Desktop\\Winter 2025\\401\\Milestone\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Models\\Event.cs",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Models\\Event.cs",
+              "ToolTip": "C:\\Users\\turne\\Desktop\\Winter 2025\\401\\Milestone\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Models\\Event.cs",
+              "RelativeToolTip": "Milestone7_backend\\Models\\Event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T22:12:08.02Z",
+              "WhenOpened": "2025-03-30T02:23:06.932Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Milestone7_backend\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Milestone7_backend\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "AuthenticationHandler.cs",
+              "DocumentMoniker": "C:\\Users\\turne\\Desktop\\Winter 2025\\401\\Milestone\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\AuthenticationHandler.cs",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Controllers\\AuthenticationHandler.cs",
+              "ToolTip": "C:\\Users\\turne\\Desktop\\Winter 2025\\401\\Milestone\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\AuthenticationHandler.cs",
+              "RelativeToolTip": "Milestone7_backend\\Controllers\\AuthenticationHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T21:02:20.576Z"
+              "WhenOpened": "2025-03-30T01:58:38.334Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TemplesController.cs",
-              "DocumentMoniker": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\TemplesController.cs",
-              "RelativeDocumentMoniker": "Milestone7_backend\\Controllers\\TemplesController.cs",
-              "ToolTip": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\TemplesController.cs",
-              "RelativeToolTip": "Milestone7_backend\\Controllers\\TemplesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\turne\\Desktop\\Winter 2025\\401\\Milestone\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\appsettings.json",
+              "RelativeDocumentMoniker": "Milestone7_backend\\appsettings.json",
+              "ToolTip": "C:\\Users\\turne\\Desktop\\Winter 2025\\401\\Milestone\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\appsettings.json",
+              "RelativeToolTip": "Milestone7_backend\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-30T01:55:12.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\turne\\Desktop\\Winter 2025\\401\\Milestone\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Program.cs",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Program.cs",
+              "ToolTip": "C:\\Users\\turne\\Desktop\\Winter 2025\\401\\Milestone\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Program.cs",
+              "RelativeToolTip": "Milestone7_backend\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T21:01:45.266Z"
+              "WhenOpened": "2025-03-30T01:50:29.649Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "EventsController.cs",
-              "DocumentMoniker": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\EventsController.cs",
+              "DocumentMoniker": "C:\\Users\\turne\\Desktop\\Winter 2025\\401\\Milestone\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\EventsController.cs",
               "RelativeDocumentMoniker": "Milestone7_backend\\Controllers\\EventsController.cs",
-              "ToolTip": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Users\\turne\\Desktop\\Winter 2025\\401\\Milestone\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\EventsController.cs",
               "RelativeToolTip": "Milestone7_backend\\Controllers\\EventsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T21:01:22.869Z"
+              "WhenOpened": "2025-03-30T01:49:45.903Z"
             }
           ]
         }

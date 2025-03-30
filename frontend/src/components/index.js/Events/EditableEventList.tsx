@@ -19,16 +19,24 @@ export const EditableEventList: React.FC<EditableEventListProps> = ({
   onBackClick,
   onSaveChanges,
 }) => {
+  const displayEventType = (type: string) => {
+    return type === "Endowment" ? "Endow" : type;
+  };
+
   return (
     <section className={styles.editEventContainer}>
       <h2 className={styles.editEventTitle}>Edit Events</h2>
       <div className={styles.editEventGrid}>
+        <div className={styles.editEventItem}>
+          <span style={{ fontWeight: 'bold' }}>Date</span>
+          <span style={{ fontWeight: 'bold' }}>Event Type</span>
+          <span style={{ fontWeight: 'bold' }}>Edit</span>
+          <span style={{ fontWeight: 'bold' }}>Delete</span>
+        </div>
         {events.map((event) => (
           <div className={styles.editEventItem} key={event.id}>
-            <span>{event.name}</span>
             <span>{event.date}</span>
-            <span>{event.time}</span>
-            <span>{event.location}</span>
+            <span>{displayEventType(event.name)}</span>
             <button
               className={styles.editItemButton}
               onClick={() => onEditEvent(event)}

@@ -1,9 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../InputDesign.module.css";
 import { EventList } from "./EventList";
-import { EditableEventList } from "./EditableEventList.tsx";
-import { EventForm } from "./EventForm.tsx";
+import { EditableEventList } from "./EditableEventList";
+import { EventForm } from "./EventForm";
 import { Event, EventFormData } from "./types";
 
 function UpcomingEvents() {
@@ -11,62 +11,88 @@ function UpcomingEvents() {
   const [showEventPopup, setShowEventPopup] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [currentEvent, setCurrentEvent] = useState<Event | null>(null);
+  const [events, setEvents] = useState<Event[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
+  // Other states for eventTypes, temples, and newEvent as before
   const [eventTypes] = useState([
     "Mtg. w/ Bishop",
     "Mtg. w/ Stake Pres.",
     "Endowment",
   ]);
 
-  const [temples] = useState([
-    "Provo Temple",
-    "Salt Lake Temple",
-    "Draper Temple",
-    "Mount Timpanogos Temple",
-  ]);
-
   const [newEvent, setNewEvent] = useState<EventFormData>({
     type: "",
-    temple: "",
     date: "",
     time: "",
-    location: "",
-    description: "",
   });
 
-  const [events, setEvents] = useState<Event[]>([
-    {
-      id: 1,
-      name: "Mtg. w/ Bishop",
-      date: "7/13",
-      time: "8:00 PM",
-      location: "Bishop's Office",
-      description: "Monthly meeting with Bishop Johnson",
-    },
-    {
-      id: 2,
-      name: "Mtg. w/ Stake Pres.",
-      date: "7/20",
-      time: "8:00 PM",
-      location: "Stake Center",
-      description: "Quarterly review with President Smith",
-    },
-    {
-      id: 3,
-      name: "Endowment",
-      date: "7/27",
-      time: "2:00 PM",
-      location: "Temple",
-      description: "Temple service with ward members",
-    },
-  ]);
+  // Fetch events from the backend on component mount.
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const res = await fetch("https://localhost:5000/Events", {
+          credentials: 'include',
+          headers: {
+            "X-Username": "testuser",
+          },
+        });
+        
+        if (!res.ok) {
+          if (res.status === 401) {
+            throw new Error("Authentication failed - check username header");
+          }
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+
+        const data = await res.json();
+        console.log("Raw API response:", data);
+
+        // Map and sort events by date
+        const mappedEvents = data.map((evt: any) => {
+          const eventDate = new Date(evt.eventDate + 'T00:00:00');
+          return {
+            id: evt.eventId,
+            name: evt.eventType,
+            date: eventDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+            time: evt.time || "",
+            rawDate: eventDate // Add raw date for sorting
+          };
+        }).sort((a: { rawDate: Date }, b: { rawDate: Date }) => a.rawDate.getTime() - b.rawDate.getTime());
+
+        setEvents(mappedEvents);
+      } catch (error: any) {
+        console.error("Fetch error:", error);
+        setError(error.message);
+      }
+    };
+
+    fetchEvents();
+  }, []);
 
   const toggleEditMode = () => {
     setIsEditMode(!isEditMode);
   };
 
-  const deleteEvent = (id: number) => {
-    setEvents(events.filter((event) => event.id !== id));
+  const deleteEvent = async (id: number) => {
+    try {
+      const res = await fetch(`https://localhost:5000/Events/${id}`, {
+        method: 'DELETE',
+        credentials: 'include',
+        headers: {
+          "X-Username": "testuser",
+        },
+      });
+      
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      
+      setEvents(events.filter((event) => event.id !== id));
+    } catch (error: any) {
+      console.error("Delete error:", error);
+      setError(error.message);
+    }
   };
 
   const openAddEventPopup = () => {
@@ -74,11 +100,8 @@ function UpcomingEvents() {
     setIsEditing(false);
     setNewEvent({
       type: "",
-      temple: "",
       date: "",
       time: "",
-      location: "",
-      description: "",
     });
   };
 
@@ -86,13 +109,16 @@ function UpcomingEvents() {
     setShowEventPopup(true);
     setIsEditing(true);
     setCurrentEvent(event);
+    
+    // Convert the short date format back to a full date for the form
+    const [month, day] = event.date.split(' ');
+    const currentYear = new Date().getFullYear();
+    const fullDate = new Date(`${month} ${day}, ${currentYear}`).toISOString().split('T')[0];
+    
     setNewEvent({
-      type: event.name ?? "", // Ensure a valid string for `type`
-      temple: event.temple ?? "",
-      date: event.date,
-      time: event.time,
-      location: event.location,
-      description: event.description,
+      type: event.name ?? "",
+      date: fullDate,
+      time: event.time ?? "",
     });
   };
 
@@ -101,28 +127,88 @@ function UpcomingEvents() {
     setCurrentEvent(null);
   };
 
-  const handleSaveEvent = () => {
-    if (isEditing && currentEvent) {
-      setEvents(
-        events.map((event) =>
-          event.id === currentEvent.id
-            ? { ...newEvent, id: event.id, name: newEvent.type }
-            : event,
-        ),
-      );
-    } else {
-      const newId = Math.max(...events.map((event) => event.id), 0) + 1;
-      setEvents([...events, { ...newEvent, id: newId, name: newEvent.type }]);
+  const handleSaveEvent = async () => {
+    try {
+      // Create date in local timezone without timezone conversion
+      const selectedDate = new Date(newEvent.date + 'T00:00:00');
+      
+      const eventData = {
+        eventType: newEvent.type,
+        eventDate: selectedDate.toISOString().split('T')[0],
+        time: newEvent.time,
+      };
+
+      const url = isEditing && currentEvent 
+        ? `https://localhost:5000/Events/${currentEvent.id}`
+        : 'https://localhost:5000/Events';
+      
+      const method = isEditing ? 'PUT' : 'POST';
+
+      const res = await fetch(url, {
+        method,
+        credentials: 'include',
+        headers: {
+          "Content-Type": "application/json",
+          "X-Username": "testuser",
+        },
+        body: JSON.stringify(eventData),
+      });
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
+      // Close the popup first
+      setShowEventPopup(false);
+      setCurrentEvent(null);
+      
+      // Then reload the page
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
+    } catch (error: any) {
+      console.error("Save error:", error);
+      setError(error.message);
     }
-    closeEventPopup();
   };
 
-  const handleSaveChanges = () => {
-    toggleEditMode();
+  const handleSaveChanges = async () => {
+    try {
+      // Refresh the events list
+      const res = await fetch("https://localhost:5000/Events", {
+        credentials: 'include',
+        headers: {
+          "X-Username": "testuser",
+        },
+      });
+      
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
+      const data = await res.json();
+      const mappedEvents = data.map((evt: any) => {
+        const eventDate = new Date(evt.eventDate + 'T00:00:00');
+        return {
+          id: evt.eventId,
+          name: evt.eventType,
+          date: eventDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+          time: evt.time || "",
+          rawDate: eventDate // Add raw date for sorting
+        };
+      }).sort((a: { rawDate: Date }, b: { rawDate: Date }) => a.rawDate.getTime() - b.rawDate.getTime());
+
+      setEvents(mappedEvents);
+      toggleEditMode();
+    } catch (error: any) {
+      console.error("Refresh error:", error);
+      setError(error.message);
+    }
   };
 
   return (
     <main>
+      {error && <div>Error: {error}</div>}
       {!isEditMode ? (
         <div className={styles.div}>
           <EventList events={events} onEditClick={toggleEditMode} />
@@ -145,7 +231,6 @@ function UpcomingEvents() {
           isEditing={isEditing}
           eventData={newEvent}
           eventTypes={eventTypes}
-          temples={temples}
           onCancel={closeEventPopup}
           onSave={handleSaveEvent}
           onChange={setNewEvent}
@@ -156,5 +241,3 @@ function UpcomingEvents() {
 }
 
 export default UpcomingEvents;
-
-

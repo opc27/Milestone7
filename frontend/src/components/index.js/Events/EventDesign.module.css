@@ -75,13 +75,17 @@
 .editEventGrid {
   color: #006d3a;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr auto auto;
-  gap: 12px;
+  grid-template-columns: 3fr 4fr 0.7fr 0.7fr;
+  gap: 16px;
   align-items: center;
   font-family: Roboto, sans-serif;
   font-size: 16px;
   font-weight: 500;
   word-break: break-word;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  margin-bottom: 20px;
 }  
 @media (width<=640px) {
   .editEventGrid {
@@ -92,31 +96,40 @@
   display: contents;
 }
 
+.editEventItem span {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .editItemButton,
 .deleteButton {
   color: #fff;
   cursor: pointer;
   border-radius: 100px;
-  padding: 4px 10px;
+  padding: 4px 12px;
   font-family: Roboto, sans-serif;
-  font-size: 13px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  max-width: 80px;
+  font-size: 12px;
+  border: none;
+  transition: background-color 0.2s;
+  min-width: 60px;
   text-align: center;
-  box-sizing: border-box;
 }
 
 .editItemButton {
   background-color: #006d3a;
-  border: 1px solid #006d3a;
+}
+
+.editItemButton:hover {
+  background-color: #005c33;
 }
 
 .deleteButton {
-  background-color: #f44;
-  border: 1px solid #f44;
+  background-color: #dc3545;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
 }
 
 @media (max-width: 640px) {
@@ -228,6 +241,12 @@
   padding: 8px;
   font-family: Roboto, sans-serif;
 }
+
+textarea.formInput {
+  min-height: 100px;
+  resize: vertical;
+}
+
 .formActions {
   justify-content: flex-end;
   gap: 12px;

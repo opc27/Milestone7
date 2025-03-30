@@ -28,8 +28,8 @@ namespace Milestone7_backend.Controllers
             HttpContext.Response.Cookies.Append("userSession", sessionId, new CookieOptions
             {
                 HttpOnly = true,
-                Secure = false, // set to true if everything is https
-                SameSite = SameSiteMode.Strict, // if CORS gets mad change this to None
+                Secure = true, // set to true if everything is https
+                SameSite = SameSiteMode.None, // if CORS gets mad change this to None
                 Expires = DateTime.Now.AddHours(1) // expires every hour
 
             });
