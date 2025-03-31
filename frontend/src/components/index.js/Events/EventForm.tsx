@@ -6,7 +6,6 @@ interface EventFormProps {
   isEditing: boolean;
   eventData: EventFormData;
   eventTypes: string[];
-  temples: string[];
   onCancel: () => void;
   onSave: () => void;
   onChange: (data: EventFormData) => void;
@@ -16,22 +15,27 @@ export const EventForm: React.FC<EventFormProps> = ({
   isEditing,
   eventData,
   eventTypes,
-  temples,
   onCancel,
   onSave,
   onChange,
 }) => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onSave();
+  };
+
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalContent}>
         <h3 className={styles.modalTitle}>
           {isEditing ? "Edit Event" : "Add New Event"}
         </h3>
-        <form className={styles.eventForm}>
+        <form className={styles.eventForm} onSubmit={handleSubmit}>
           <select
             className={styles.formSelect}
             value={eventData.type}
             onChange={(e) => onChange({ ...eventData, type: e.target.value })}
+            required
           >
             <option value="">Select Event Type</option>
             {eventTypes.map((type) => (
@@ -41,28 +45,12 @@ export const EventForm: React.FC<EventFormProps> = ({
             ))}
           </select>
 
-          {eventData.type === "Endowment" && (
-            <select
-              className={styles.formSelect}
-              value={eventData.temple}
-              onChange={(e) =>
-                onChange({ ...eventData, temple: e.target.value })
-              }
-            >
-              <option value="">Select Temple</option>
-              {temples.map((temple) => (
-                <option key={temple} value={temple}>
-                  {temple}
-                </option>
-              ))}
-            </select>
-          )}
-
           <input
             type="date"
             className={styles.formInput}
             value={eventData.date}
             onChange={(e) => onChange({ ...eventData, date: e.target.value })}
+            required
           />
 
           <input
@@ -70,6 +58,7 @@ export const EventForm: React.FC<EventFormProps> = ({
             className={styles.formInput}
             value={eventData.time}
             onChange={(e) => onChange({ ...eventData, time: e.target.value })}
+            required
           />
 
           <div className={styles.formActions}>
@@ -81,9 +70,8 @@ export const EventForm: React.FC<EventFormProps> = ({
               Cancel
             </button>
             <button
-              type="button"
+              type="submit"
               className={styles.saveModalButton}
-              onClick={onSave}
             >
               Save
             </button>

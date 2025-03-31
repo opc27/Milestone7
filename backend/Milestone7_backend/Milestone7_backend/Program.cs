@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using Milestone7_backend.Data;
 
@@ -28,6 +29,13 @@ var allowedOrigins = Enumerable.Range(3000, 101)  // Ports 3000-3100
     .Select(port => $"http://localhost:{port}")
     .ToArray();
 
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = "Custom";
+    options.DefaultChallengeScheme = "Custom";
+})
+.AddScheme<AuthenticationSchemeOptions, AuthenticationHandler>("Custom", options => { });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -40,6 +48,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCors("AllowFrontend");
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
