@@ -1,22 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\",
+  "WorkspaceRootPath": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\harmo\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\sarface\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\harmo\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\sarface\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\sarface\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\milestone7_backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\milestone7_backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\sarface\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\sarface\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\migrations\\20250330024411_addtimecolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\migrations\\20250330024411_addtimecolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\sarface\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\migrations\\20250330024411_addtimecolumn.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\migrations\\20250330024411_addtimecolumn.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\sarface\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\sarface\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\authenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\controllers\\authenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\sarface\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\migrations\\20250317204701_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\migrations\\20250317204701_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\sarface\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\harmo\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\templescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\sarface\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\templescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\controllers\\templescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|c:\\users\\harmo\\documents\\github\\milestone7\\backend\\milestone7_backend\\milestone7_backend\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC792D5E-DE5D-491A-88EB-0B14E64238B9}|Milestone7_backend\\Milestone7_backend.csproj|solutionrelative:milestone7_backend\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,24 +62,76 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20250330024411_AddTimeColumn.cs",
+              "DocumentMoniker": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Migrations\\20250330024411_AddTimeColumn.cs",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Migrations\\20250330024411_AddTimeColumn.cs",
+              "ToolTip": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Migrations\\20250330024411_AddTimeColumn.cs",
+              "RelativeToolTip": "Milestone7_backend\\Migrations\\20250330024411_AddTimeColumn.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T16:18:10.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20250330024411_AddTimeColumn.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Migrations\\20250330024411_AddTimeColumn.Designer.cs",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Migrations\\20250330024411_AddTimeColumn.Designer.cs",
+              "ToolTip": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Migrations\\20250330024411_AddTimeColumn.Designer.cs",
+              "RelativeToolTip": "Milestone7_backend\\Migrations\\20250330024411_AddTimeColumn.Designer.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAIoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T16:17:50.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthenticationHandler.cs",
+              "DocumentMoniker": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\AuthenticationHandler.cs",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Controllers\\AuthenticationHandler.cs",
+              "ToolTip": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\AuthenticationHandler.cs",
+              "RelativeToolTip": "Milestone7_backend\\Controllers\\AuthenticationHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T16:17:03.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Milestone7_backend\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T15:09:59.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Program.cs",
               "RelativeDocumentMoniker": "Milestone7_backend\\Program.cs",
-              "ToolTip": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Program.cs",
+              "ToolTip": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Program.cs",
               "RelativeToolTip": "Milestone7_backend\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T22:12:08.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Milestone7_backend\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Milestone7_backend\\Controllers\\UsersController.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -60,26 +140,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Milestone7_backend",
+              "DocumentMoniker": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Milestone7_backend.csproj",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Milestone7_backend.csproj",
+              "ToolTip": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Milestone7_backend.csproj",
+              "RelativeToolTip": "Milestone7_backend\\Milestone7_backend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-31T15:41:43.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Models\\Event.cs",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Models\\Event.cs",
+              "ToolTip": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Models\\Event.cs",
+              "RelativeToolTip": "Milestone7_backend\\Models\\Event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T15:11:10.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20250317204701_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Migrations\\20250317204701_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Migrations\\20250317204701_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Migrations\\20250317204701_InitialCreate.cs",
+              "RelativeToolTip": "Milestone7_backend\\Migrations\\20250317204701_InitialCreate.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwBEAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T15:08:55.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "Milestone7_backend\\Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "Milestone7_backend\\Controllers\\EventsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T21:01:22.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "TemplesController.cs",
-              "DocumentMoniker": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\TemplesController.cs",
+              "DocumentMoniker": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\TemplesController.cs",
               "RelativeDocumentMoniker": "Milestone7_backend\\Controllers\\TemplesController.cs",
-              "ToolTip": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\TemplesController.cs",
+              "ToolTip": "C:\\Users\\sarface\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\TemplesController.cs",
               "RelativeToolTip": "Milestone7_backend\\Controllers\\TemplesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T21:01:45.266Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EventsController.cs",
-              "DocumentMoniker": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\EventsController.cs",
-              "RelativeDocumentMoniker": "Milestone7_backend\\Controllers\\EventsController.cs",
-              "ToolTip": "C:\\Users\\harmo\\Documents\\GitHub\\Milestone7\\backend\\Milestone7_backend\\Milestone7_backend\\Controllers\\EventsController.cs",
-              "RelativeToolTip": "Milestone7_backend\\Controllers\\EventsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T21:01:22.869Z"
             }
           ]
         }

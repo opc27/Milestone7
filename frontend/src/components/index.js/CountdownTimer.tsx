@@ -1,25 +1,38 @@
 import { useState, useEffect } from "react";
+import { Event } from "./Events/types";
 
-const CountdownTimer = () => {
-  //temporary for testing purposes
-  const testDate = new Date();
-  testDate.setDate(testDate.getDate() + 5); // 5 days in the future
-  const defaultDate = testDate.toISOString().split("T")[0];
+interface CountdownTimerProps {
+  event: Event; // Pass the event as a prop to the component
+}
 
+const CountdownTimer: React.FC<CountdownTimerProps> = ({ event }) => {
   // ==========================
   // STATE FOR TARGET DATE
   // ==========================
-  const [targetDate, setTargetDate] = useState<string>(defaultDate); // This will be replaced later with user input
+  const [targetDate, setTargetDate] = useState<string | null>(null); 
   const [timeLeft, setTimeLeft] = useState<{ days: number; hours: number }>({
     days: 0,
     hours: 0,
   });
 
-  //function to update timer
+  // Set the target date based on the event type
+  useEffect(() => {
+    console.log("Received event in CountdownTimer:", event);
+    if (event && event.eventType === "Endowment") {
+      // Fix here: Use event.eventDate instead of event.date
+      console.log("Setting targetDate to:", event.eventDate);
+      setTargetDate(event.eventDate); // Use event.eventDate here
+    }
+  }, [event]);
+  
+  
+
+  // Function to update the timer
   const calculateTimeLeft = (date: string) => {
     const now = new Date();
     const eventDate = new Date(date);
     const difference = eventDate.getTime() - now.getTime();
+    console.log("Event date received:", event.date);
 
     if (difference > 0) {
       setTimeLeft({
@@ -31,7 +44,7 @@ const CountdownTimer = () => {
     }
   };
 
-  //update the timer
+  // Update the timer every hour
   useEffect(() => {
     if (!targetDate) return;
 
@@ -41,28 +54,13 @@ const CountdownTimer = () => {
     return () => clearInterval(interval);
   }, [targetDate]);
 
-  // future code when infrastructure in place
-  /*
-  useEffect(() => {
-    // Example: This could be replaced by a prop or context value later
-    // The targetDate should be passed down as a prop or set from a global state
-    setTargetDate(receivedDateFromApp); // Replace with actual date variable when available
-  }, [receivedDateFromApp]); 
-  */
-
   return (
     <div>
-      <h2>Countdown Timer</h2>
-
-      {/* TEMPORARY: Manual Input for Testing */}
-      {/* This input field allows for testing purposes only. Once user input infrastructure is ready, remove this. */}
-      <input
-        type="date"
-        onChange={(e) => setTargetDate(e.target.value)}
-        value={targetDate}
-      />
-
-      <h3>{timeLeft.days} days, {timeLeft.hours} hours left</h3>
+      {targetDate ? (
+        <h3>{timeLeft.days} days, {timeLeft.hours} hours left</h3>
+      ) : (
+        <p>No upcoming Endowment event.</p>
+      )}
     </div>
   );
 };

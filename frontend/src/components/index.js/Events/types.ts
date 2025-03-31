@@ -4,6 +4,8 @@ export interface Event {
   date: string;
   time: string;
   type?: string;
+  eventType: string;
+  eventDate: string;
 }
 
 export interface EventFormData {

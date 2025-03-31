@@ -85,7 +85,7 @@ function UpcomingEvents() {
       });
       
       if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
+        throw new Error(`HTTP error#1! status: ${res.status}`);
       }
       
       setEvents(events.filter((event) => event.id !== id));
@@ -154,9 +154,9 @@ function UpcomingEvents() {
         body: JSON.stringify(eventData),
       });
 
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
+      // if (!res.ok) {
+      //   throw new Error(`HTTP error2! status: ${res.status}`);
+      // }
 
       // Close the popup first
       setShowEventPopup(false);
