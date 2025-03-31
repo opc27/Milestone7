@@ -12,6 +12,13 @@ import { ChatButton } from "../sharedLayout/ChatButton";
 export const InputDesign: React.FC = () => {
   const navigate = useNavigate();
 
+  const handlePickup = async () => {
+    const userId = localStorage.getItem("userId");
+    const response = await fetch(`https://localhost:5000/users/${userId}/currentModule`);
+    const data = await response.json();
+    navigate(`/modules/${data.currentModule}`);
+    
+  };
 
   return (
     <>
@@ -22,7 +29,7 @@ export const InputDesign: React.FC = () => {
       <main className={styles.appContainer}>
         <WelcomeSection />
         {/*This just reloads the page for now but should be updated once we have the info for retaining user progress*/}
-        <button className={styles.pickupButton} onClick={() => navigate('/modules')}>
+        <button className={styles.pickupButton} onClick={handlePickup}>
           <span>Pick up where you left off</span>
           <ArrowIcon />
         </button>

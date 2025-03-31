@@ -25,6 +25,7 @@ import { ModulePage } from './components/modules/ModulePage.tsx';
 // Create a wrapper component to use the useLocation hook
 const AppContent = () => {
   const location = useLocation();
+  const isLoginPage = location.pathname === '/login' || location.pathname === '/';
   const isChatbotPage = location.pathname === '/chatbot';
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
@@ -48,9 +49,10 @@ const AppContent = () => {
 
   return (
     <>
-      {/* Always show StatusBar and Header */}
+      {/* Always show StatusBar */}
       <StatusBar />
-      <Header />
+      {/* Show Header on all pages except Login */}
+      {!isLoginPage && <Header />}
       <Routes>
         <Route path="/home" element={<InputDesign />} />
         <Route path="/chatbot" element={<ChatbotPage />} />
